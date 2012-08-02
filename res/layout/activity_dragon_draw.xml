@@ -9,6 +9,6 @@
         android:layout_centerHorizontal="true"
         android:layout_centerVertical="true"
         android:padding="@dimen/padding_medium"
-        tools:context=".DragonDrop" />
+        tools:context=".DragonDraw" />
 
 </RelativeLayout>
