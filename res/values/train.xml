@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <array name="train">
+        <item>@array/train_target_back_wheel1</item>
+        <item>@array/train_target_back_wheel2</item>
+        <item>@array/train_target_middle_wheel1</item>
+        <item>@array/train_target_middle_wheel2</item>
+        <item>@array/train_target_front_wheel1</item>
+        <item>@array/train_target_front_wheel2</item>
+        <item>@array/train_target_front_wheel3</item>
+        <item>@array/train_target_back_body</item>
+        <item>@array/train_target_back_floor</item>
+        <item>@array/train_target_back_roof</item>
+        <item>@array/train_target_middle_floor</item>
+        <item>@array/train_target_middle_body</item>
+        <item>@array/train_target_front_floor</item>
+        <item>@array/train_target_front_body</item>
+        <item>@array/train_target_front_upright</item>
+        <item>@array/train_target_front_top</item>
+        <item>@array/train_spawn_body</item>
+        <item>@array/train_spawn_floor</item>
+        <item>@array/train_spawn_front_floor</item>
+        <item>@array/train_spawn_front_roof</item>
+        <item>@array/train_spawn_upright</item>
+        <item>@array/train_spawn_wheel</item>
+    </array>
+    <array name="train_target_back_wheel1">
+        <item>"Oval"</item>
+        <item>"Target"</item>
+        <item>20</item>
+        <item>280</item>
+        <item>45</item>
+        <item>305</item>
+    </array>
+    <array name="train_target_back_wheel2">
+        <item>"Oval"</item>
+        <item>"Target"</item>
+        <item>100</item>
+        <item>280</item>
+        <item>125</item>
+        <item>305</item>
+    </array>
+    <array name="train_target_middle_wheel1">
+        <item>"Oval"</item>
+        <item>"Target"</item>
+        <item>145</item>
+        <item>280</item>
+        <item>170</item>
+        <item>305</item>
+    </array>
+    <array name="train_target_middle_wheel2">
+        <item>"Oval"</item>
+        <item>"Target"</item>
+        <item>225</item>
+        <item>280</item>
+        <item>250</item>
+        <item>305</item>
+    </array>
+    <array name="train_target_front_wheel1">
+        <item>"Oval"</item>
+        <item>"Target"</item>
+        <item>290</item>
+        <item>280</item>
+        <item>315</item>
+        <item>305</item>
+    </array>
+    <array name="train_target_front_wheel2">
+        <item>"Oval"</item>
+        <item>"Target"</item>
+        <item>320</item>
+        <item>280</item>
+        <item>345</item>
+        <item>305</item>
+    </array>
+    <array name="train_target_front_wheel3">
+        <item>"Oval"</item>
+        <item>"Target"</item>
+        <item>395</item>
+        <item>280</item>
+        <item>420</item>
+        <item>305</item>
+    </array>
+    <array name="train_target_back_roof">
+        <item>"Rect"</item>
+        <item>"Target"</item>
+        <item>15</item>
+        <item>180</item>
+        <item>130</item>
+        <item>195</item>
+    </array>
+    <array name="train_target_back_floor">
+        <item>"Rect"</item>
+        <item>"Target"</item>
+        <item>15</item>
+        <item>260</item>
+        <item>130</item>
+        <item>275</item>
+    </array>
+    <array name="train_target_back_body">
+        <item>"Rect"</item>
+        <item>"Target"</item>
+        <item>25</item>
+        <item>200</item>
+        <item>120</item>
+        <item>255</item>
+    </array>
+    <array name="train_target_middle_floor">
+        <item>"Rect"</item>
+        <item>"Target"</item>
+        <item>140</item>
+        <item>260</item>
+        <item>255</item>
+        <item>275</item>
+    </array>
+    <array name="train_target_middle_body">
+        <item>"Rect"</item>
+        <item>"Target"</item>
+        <item>150</item>
+        <item>200</item>
+        <item>245</item>
+        <item>255</item>
+    </array>
+    <array name="train_target_front_floor">
+        <item>"Rect"</item>
+        <item>"Target"</item>
+        <item>265</item>
+        <item>260</item>
+        <item>430</item>
+        <item>275</item>
+    </array>
+    <array name="train_target_front_body">
+        <item>"Rect"</item>
+        <item>"Target"</item>
+        <item>325</item>
+        <item>200</item>
+        <item>420</item>
+        <item>255</item>
+    </array>
+    <array name="train_target_front_upright">
+        <item>"Rect"</item>
+        <item>"Target"</item>
+        <item>270</item>
+        <item>160</item>
+        <item>320</item>
+        <item>255</item>
+    </array>
+    <array name="train_target_front_top">
+        <item>"Rect"</item>
+        <item>"Target"</item>
+        <item>260</item>
+        <item>140</item>
+        <item>330</item>
+        <item>155</item>
+    </array>
+    <array name="train_spawn_floor">
+        <item>"Rect"</item>
+        <item>"Spawn"</item>
+        <item>10</item>
+        <item>545</item>
+        <item>125</item>
+        <item>560</item>
+    </array>
+    <array name="train_spawn_body">
+        <item>"Rect"</item>
+        <item>"Spawn"</item>
+        <item>120</item>
+        <item>480</item>
+        <item>215</item>
+        <item>535</item>
+    </array>
+    <array name="train_spawn_upright">
+        <item>"Rect"</item>
+        <item>"Spawn"</item>
+        <item>230</item>
+        <item>460</item>
+        <item>280</item>
+        <item>555</item>
+    </array>
+    <array name="train_spawn_front_roof">
+        <item>"Rect"</item>
+        <item>"Spawn"</item>
+        <item>20</item>
+        <item>500</item>
+        <item>90</item>
+        <item>515</item>
+    </array>
+    <array name="train_spawn_front_floor">
+        <item>"Rect"</item>
+        <item>"Spawn"</item>
+        <item>290</item>
+        <item>500</item>
+        <item>455</item>
+        <item>515</item>
+    </array>
+    <array name="train_spawn_wheel">
+        <item>"Oval"</item>
+        <item>"Spawn"</item>
+        <item>290</item>
+        <item>525</item>
+        <item>315</item>
+        <item>550</item>
+    </array>
+
+</resources>
