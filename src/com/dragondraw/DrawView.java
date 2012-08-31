@@ -4,28 +4,45 @@ import java.util.ArrayList;
 import java.util.List;
 
 import android.content.Context;
+import android.content.res.Resources;
+import android.content.res.TypedArray;
 import android.graphics.Canvas;
-import android.graphics.Rect;
-import android.graphics.drawable.shapes.OvalShape;
-import android.graphics.drawable.shapes.Shape;
+import android.graphics.drawable.ShapeDrawable;
 import android.view.MotionEvent;
 import android.view.View;
 
 public class DrawView extends View {
+	private static final String TAG = "DrawView";
 	private List<MovableShape> shapes = new ArrayList<MovableShape>();
 	private List<ShapeSpawn> spawns = new ArrayList<ShapeSpawn>();
+	private List<ShapeTarget> targets = new ArrayList<ShapeTarget>();
 	private MovableShape activeShape;
 
-	public DrawView(Context context) {
+	public DrawView(Context context, int levelId) {
 		super(context);
 		setFocusable(true); // necessary for getting the touch events
 
-		Shape circle = new OvalShape();
+		loadLevel(levelId);
 
-		ShapeSpawn ball = new ShapeSpawn(circle);
-		Rect bounds = new Rect(20, 20, 40, 40);
-		ball.setBounds(bounds);
-		spawns.add(ball);
+	}
+
+	private void loadLevel(int levelId) {
+		Resources resources = getResources();
+		TypedArray levelResources = resources.obtainTypedArray(levelId);
+
+		for (int resourceIndex = 0; resourceIndex < levelResources.length(); resourceIndex++) {
+			int shapeId = levelResources.getResourceId(resourceIndex, 0);
+			TypedArray shapeArray = resources.obtainTypedArray(shapeId);
+
+			ShapeDrawable firstShape = ShapeFactory.createShape(shapeArray);
+
+			if (firstShape instanceof ShapeTarget) {
+				targets.add((ShapeTarget) firstShape);
+			} else {
+				spawns.add((ShapeSpawn) firstShape);
+			}
+		}
+
 	}
 
 	// the method that draws the balls
@@ -33,7 +50,10 @@ public class DrawView extends View {
 	protected void onDraw(Canvas canvas) {
 		// canvas.drawColor(0xFFCCCCCC); //if you want another background color
 
-		// draw the balls on the canvas
+		for (ShapeTarget target : targets) {
+			target.draw(canvas);
+		}
+
 		for (MovableShape shape : shapes) {
 			shape.draw(canvas);
 		}
@@ -55,6 +75,8 @@ public class DrawView extends View {
 		switch (eventaction) {
 
 		case MotionEvent.ACTION_DOWN:
+			// If we aren't dragging a shape, see if we clicking on a spawn.
+			// If we are, create a shape.
 			if (activeShape == null) {
 				for (ShapeSpawn spawn : spawns) {
 					if (spawn.getBounds().contains(touchedX, touchedY)) {
@@ -64,7 +86,8 @@ public class DrawView extends View {
 					}
 				}
 			}
-			
+
+			// See if we have clicked on a shape
 			for (MovableShape shape : shapes) {
 				if (shape.getBounds().contains(touchedX, touchedY)) {
 					activeShape = shape;
@@ -76,6 +99,18 @@ public class DrawView extends View {
 		case MotionEvent.ACTION_MOVE:
 			if (activeShape != null) {
 				activeShape.moveShape(touchedX, touchedY);
+
+				for (ShapeTarget target : targets) {
+					if (target.hitTarget(activeShape)
+							&& target.matchesTarget(activeShape)) {
+
+						activeShape.moveShape(target.getBounds().centerX(),
+								target.getBounds().centerY());
+						activeShape = null;
+						break;
+					}
+
+				}
 			}
 			break;
 		case MotionEvent.ACTION_UP:

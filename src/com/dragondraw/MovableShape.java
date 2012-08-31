@@ -5,16 +5,13 @@ import android.graphics.drawable.ShapeDrawable;
 import android.graphics.drawable.shapes.Shape;
 
 public class MovableShape extends ShapeDrawable{
-	private boolean goRight = true;
-	private boolean goDown = true;
-
 	
 	public MovableShape() {
 		super();
 	}
 
-	public MovableShape(Shape s) {
-		super(s);
+	public MovableShape(Shape shape) {
+		super(shape);
 	}
 
 	public void moveShape(int newX, int newY) {
