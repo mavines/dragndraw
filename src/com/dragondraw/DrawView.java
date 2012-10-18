@@ -100,14 +100,24 @@ public class DrawView extends View {
 			if (activeShape != null) {
 				activeShape.moveShape(touchedX, touchedY);
 
+				// See if we have moved close to any targets
 				for (ShapeTarget target : targets) {
-					if (target.hitTarget(activeShape)
-							&& target.matchesTarget(activeShape)) {
+					// Make sure the target isn't filled
+					if (!target.isFilled()) {
+						// See if we hit the target and see if we match the
+						// shape of the target.
+						if (target.hitTarget(activeShape)
+								&& target.matchesTarget(activeShape)) {
 
-						activeShape.moveShape(target.getBounds().centerX(),
-								target.getBounds().centerY());
-						activeShape = null;
-						break;
+							// Snap the shape to the target and mark the target
+							// as filled.
+							activeShape.moveShape(target.getBounds().centerX(),
+									target.getBounds().centerY());
+							target.fill();
+							shapes.remove(activeShape);
+							activeShape = null;
+							break;
+						}
 					}
 
 				}

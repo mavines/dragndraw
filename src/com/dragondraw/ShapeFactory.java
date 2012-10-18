@@ -15,6 +15,7 @@ public class ShapeFactory {
 
 		Shape shape = getShape(shapeString);
 
+			
 		int left = shapeArray.getInt(2, 0);
 		int top = shapeArray.getInt(3, 0);
 		int right = shapeArray.getInt(4, 0);

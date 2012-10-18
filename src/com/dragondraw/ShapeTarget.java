@@ -8,15 +8,25 @@ import android.graphics.Rect;
 import android.graphics.drawable.ShapeDrawable;
 import android.graphics.drawable.shapes.Shape;
 
-public class ShapeTarget extends ShapeDrawable{
+public class ShapeTarget extends ShapeDrawable {
 	private static final int SNAP_DISTANCE = 40;
-	private static final Paint TARGET_PAINT = buildPaint();
-	
+	private static final Paint TARGET_PAINT = buildTargetPaint();
+	private static final Paint FILLED_PAINT = buildFillPaint();
+	private boolean filled;
+
 	public ShapeTarget(Shape shape) {
 		super(shape);
+		filled = false;
 	}
-	
-	
+
+	public boolean isFilled() {
+		return filled;
+	}
+
+	public void fill() {
+		this.filled = true;
+	}
+
 	public boolean hitTarget(MovableShape shape) {
 		Rect shapeBounds = shape.getBounds();
 		Rect targetBounds = this.getBounds();
@@ -36,24 +46,34 @@ public class ShapeTarget extends ShapeDrawable{
 				&& shapeBounds.width() == targetBounds.width()
 				&& shape.getShape().getClass() == this.getShape().getClass();
 	}
-	
-	
-	
+
 	@Override
 	protected void onDraw(Shape shape, Canvas canvas, Paint paint) {
-		super.onDraw(shape, canvas, TARGET_PAINT);
+		if (isFilled()) {
+			super.onDraw(shape, canvas, FILLED_PAINT);
+
+		} else {
+			super.onDraw(shape, canvas, TARGET_PAINT);
+		}
 	}
 
-
-	private static Paint buildPaint()
-	{
+	private static Paint buildTargetPaint() {
 		Paint targetPaint = new Paint();
-		
+
 		targetPaint.setStyle(Style.STROKE);
 		targetPaint.setStrokeWidth(2);
 		targetPaint.setAntiAlias(true);
-		targetPaint.setPathEffect(new DashPathEffect(new float[] {4,4}, 0));
-		
+		targetPaint.setPathEffect(new DashPathEffect(new float[] { 4, 4 }, 0));
+
 		return targetPaint;
+	}
+
+	private static Paint buildFillPaint() {
+		Paint fillPaint = new Paint();
+
+		fillPaint.setStyle(Style.FILL);
+		fillPaint.setAntiAlias(true);
+
+		return fillPaint;
 	}
 }
