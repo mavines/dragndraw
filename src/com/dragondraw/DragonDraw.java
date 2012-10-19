@@ -15,7 +15,7 @@ public class DragonDraw extends Activity {
         super.onCreate(savedInstanceState);
         
         // draw the view
-        setContentView(new DrawView(this, R.array.train));
+        setContentView(new ColorView(this, R.array.train));
     }
 
     @Override

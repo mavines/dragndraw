@@ -13,7 +13,7 @@
         android:theme="@style/AppTheme"
         android:debuggable="true" >
         <activity
-            android:name="com.dragondraw.DragonDraw"
+            android:name=".DragonDraw"
             android:label="@string/title_activity_dragon_draw" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

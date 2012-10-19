@@ -1,4 +1,4 @@
-package com.dragondraw;
+package com.dragondraw.shape;
 
 import android.graphics.Rect;
 import android.graphics.drawable.ShapeDrawable;
@@ -23,4 +23,6 @@ public class MovableShape extends ShapeDrawable{
 		
 		super.setBounds(bounds);
 	}
+	
+	
 }
