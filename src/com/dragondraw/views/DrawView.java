@@ -1,4 +1,4 @@
-package com.dragondraw;
+package com.dragondraw.views;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -20,8 +20,7 @@ public class DrawView extends View {
 	private static final String TAG = "DrawView";
 
 	// Holds either the shape spawns or the color spawns based on the phase of
-	// the
-	// game.
+	// the game.
 	private List<ShapeSpawn> currentSpawns;
 	private List<ShapeSpawn> shapeSpawns = new ArrayList<ShapeSpawn>();
 	private List<ShapeSpawn> colorSpawns = new ArrayList<ShapeSpawn>();

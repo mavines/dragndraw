@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <array name="train">
+    <array type="id" name="train">
         <item>@array/train_target_back_wheel1</item>
         <item>@array/train_target_back_wheel2</item>
         <item>@array/train_target_middle_wheel1</item>

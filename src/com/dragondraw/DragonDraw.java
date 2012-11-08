@@ -1,28 +1,23 @@
 package com.dragondraw;
 
-import com.dragondraw.R;
-
-import android.os.Bundle;
 import android.app.Activity;
-import android.view.Menu;
-import android.view.MenuItem;
-import android.support.v4.app.NavUtils;
+import android.os.Bundle;
+
+import com.dragondraw.views.DrawView;
 
 public class DragonDraw extends Activity {
-
+	public static final String PICTURE_KEY = "PictureId";
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         
-        // draw the view
-        setContentView(new DrawView(this, R.array.train));
+        Bundle extras = getIntent().getExtras();
+        if (extras != null) {
+            long pictureKey = extras.getLong(PICTURE_KEY);
+            
+            // draw the view
+            setContentView(new DrawView(this, (int)pictureKey));
+        }
     }
-
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        getMenuInflater().inflate(R.menu.activity_dragon_draw, menu);
-        return true;
-    }
-
     
 }

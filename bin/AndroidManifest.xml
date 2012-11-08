@@ -8,18 +8,20 @@
         android:targetSdkVersion="15" />
 
     <application
+        android:debuggable="true"
         android:icon="@drawable/ic_launcher"
         android:label="@string/app_name"
-        android:theme="@style/AppTheme"
-        android:debuggable="true" >
+        android:theme="@style/AppTheme" >
         <activity
-            android:name=".DragonDraw"
+            android:name=".MainMenu"
             android:label="@string/title_activity_dragon_draw" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+        </activity>
+        <activity android:name=".DragonDraw" >
         </activity>
     </application>
 
