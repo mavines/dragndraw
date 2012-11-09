@@ -213,7 +213,7 @@
         <item>565</item>
         <item>"#0000FF"</item>
     </array>
-        <array name="train_color_red">
+    <array name="train_color_red">
         <item>"Oval"</item>
         <item>"Color"</item>
         <item>350</item>
@@ -222,7 +222,7 @@
         <item>565</item>
         <item>"#FF0000"</item>
     </array>
-        <array name="train_color_green">
+    <array name="train_color_green">
         <item>"Oval"</item>
         <item>"Color"</item>
         <item>410</item>

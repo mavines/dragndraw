@@ -18,9 +18,15 @@ import android.view.View;
 
 public class DrawView extends View {
 	private static final String TAG = "DrawView";
-	private List<MovableShape> shapes = new ArrayList<MovableShape>();
-	private List<ShapeSpawn> spawns = new ArrayList<ShapeSpawn>();
-	private List<ShapeTarget> targets = new ArrayList<ShapeTarget>();
+
+	// Holds either the shape spawns or the color spawns based on the phase of
+	// the
+	// game.
+	private List<ShapeSpawn> currentSpawns;
+	private List<ShapeSpawn> shapeSpawns = new ArrayList<ShapeSpawn>();
+	private List<ShapeSpawn> colorSpawns = new ArrayList<ShapeSpawn>();
+	private List<ShapeTarget> unfilledTargets = new ArrayList<ShapeTarget>();
+	private List<ShapeTarget> filledTargets = new ArrayList<ShapeTarget>();
 	private MovableShape activeShape;
 
 	public DrawView(Context context, int levelId) {
@@ -39,19 +45,22 @@ public class DrawView extends View {
 			int shapeId = levelResources.getResourceId(resourceIndex, 0);
 			TypedArray shapeArray = resources.obtainTypedArray(shapeId);
 			String shapeString = shapeArray.getString(1);
-			
-			// Skip all colors, we just want targets and spawns.
-			if (shapeString.equals("Color")) {
-				continue;
-			}
-			
+
 			ShapeDrawable createdShape = ShapeFactory.createShape(shapeArray);
 
-			if (createdShape instanceof ShapeTarget) {
-				targets.add((ShapeTarget) createdShape);
-			} else if(createdShape instanceof ShapeSpawn){
-				spawns.add((ShapeSpawn) createdShape);
+			// Put the created shape into the corresponding list.
+			if (shapeString.equals("Color")) {
+				colorSpawns.add((ShapeSpawn) createdShape);
+			} else if (shapeString.equals("Spawn")) {
+				shapeSpawns.add((ShapeSpawn) createdShape);
+			} else if (shapeString.equals("Target")) {
+				unfilledTargets.add((ShapeTarget) createdShape);
+			} else {
+				assert false : "Shouldn't get here, invalid shape string.";
 			}
+
+			// We start with the shapes
+			currentSpawns = shapeSpawns;
 		}
 	}
 
@@ -59,18 +68,21 @@ public class DrawView extends View {
 	protected void onDraw(Canvas canvas) {
 		// canvas.drawColor(0xFFCCCCCC); //if you want another background color
 
-		for (ShapeTarget target : targets) {
-			target.draw(canvas);
+		for (ShapeTarget unfilledTarget : unfilledTargets) {
+			unfilledTarget.draw(canvas);
 		}
 
-		for (MovableShape shape : shapes) {
-			shape.draw(canvas);
+		for (ShapeTarget filledTarget : filledTargets) {
+			filledTarget.draw(canvas);
 		}
 
-		for (ShapeSpawn spawn : spawns) {
+		for (ShapeSpawn spawn : currentSpawns) {
 			spawn.draw(canvas);
 		}
 
+		if (activeShape != null) {
+			activeShape.draw(canvas);
+		}
 	}
 
 	// events when touching the screen
@@ -87,20 +99,11 @@ public class DrawView extends View {
 			// If we aren't dragging a shape, see if we clicking on a spawn.
 			// If we are, create a shape.
 			if (activeShape == null) {
-				for (ShapeSpawn spawn : spawns) {
+				for (ShapeSpawn spawn : currentSpawns) {
 					if (spawn.getBounds().contains(touchedX, touchedY)) {
-						MovableShape newShape = spawn.spawnShape();
-						shapes.add(newShape);
+						activeShape = spawn.spawnShape();
 						break;
 					}
-				}
-			}
-
-			// See if we have clicked on a shape
-			for (MovableShape shape : shapes) {
-				if (shape.getBounds().contains(touchedX, touchedY)) {
-					activeShape = shape;
-					break;
 				}
 			}
 
@@ -109,32 +112,43 @@ public class DrawView extends View {
 			if (activeShape != null) {
 				activeShape.moveShape(touchedX, touchedY);
 
-				// See if we have moved close to any targets
-				for (ShapeTarget target : targets) {
-					// Make sure the target isn't filled
-					if (!target.isFilled()) {
-						// See if we hit the target and see if we match the
-						// shape of the target.
-						if (target.hitTarget(activeShape)
-								&& target.matchesTarget(activeShape)) {
+				// See if we have moved close to any unfilled targets
+				for (ShapeTarget target : unfilledTargets) {
+					// See if we hit the target and see if we match the
+					// shape of the target.
+					if (target.hitTarget(activeShape)
+							&& target.matchesTarget(activeShape)) {
 
-							// Snap the shape to the target and mark the target
-							// as filled.
-							activeShape.moveShape(target.getBounds().centerX(),
-									target.getBounds().centerY());
-							target.fill();
-							shapes.remove(activeShape);
-							activeShape = null;
-							break;
-						}
+						// Snap the shape to the target and mark the target
+						// as filled.
+						activeShape.moveShape(target.getBounds().centerX(),
+								target.getBounds().centerY());
+						target.fill();
+						filledTargets.add(target);
+						unfilledTargets.remove(target);
+						activeShape = null;
+						
+						//if that was the last target, switch to color spawns
+						if(unfilledTargets.isEmpty()){
+							currentSpawns = colorSpawns;
+						}						
+						break;
 					}
-
 				}
 			}
 			break;
 		case MotionEvent.ACTION_UP:
-			shapes.remove(activeShape);
-			activeShape = null;
+			// Check to see if the color is close to a target.
+			// If it is, paint that target.
+			if (activeShape != null) {
+				for (ShapeTarget target : filledTargets) {
+					if (target.getBounds().contains(touchedX, touchedY)) {
+						int color = activeShape.getPaint().getColor();
+						target.getPaint().setColor(color);
+					}
+				}
+				activeShape = null;
+			}
 			break;
 		}
 		// redraw the canvas
