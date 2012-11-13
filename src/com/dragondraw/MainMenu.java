@@ -50,13 +50,14 @@ public class MainMenu extends Activity {
 
 		@Override
 		public Object getItem(int position) {
-			return mThumbIds[0];
+			return mThumbIds[position];
 		}
 
 		@Override
 		public long getItemId(int position) {
 			Resources resources = getResources();
-			return resources.obtainTypedArray(R.array.pictures).getResourceId(position, 0);
+			return resources.obtainTypedArray(R.array.pictures).getResourceId(
+					position, 0);
 		}
 
 		@Override
@@ -77,6 +78,7 @@ public class MainMenu extends Activity {
 		}
 
 		// references to our images
-		private Integer[] mThumbIds = { R.drawable.train_icon };
+		private Integer[] mThumbIds = { R.drawable.train_icon,
+				R.drawable.truck_icon };
 	}
 }

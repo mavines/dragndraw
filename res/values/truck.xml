@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <array name="truck" type="id">
+        <item>@array/truck_target_back_wheel1</item>
+        <item>@array/truck_target_back_wheel2</item>
+        <item>@array/truck_target_mid_wheel1</item>
+        <item>@array/truck_target_mid_wheel2</item>
+        <item>@array/truck_target_front_wheel</item>
+        <item>@array/truck_target_bottom</item>
+        <item>@array/truck_target_trailer</item>
+        <item>@array/truck_target_cab</item>
+        <item>@array/truck_target_front</item>
+        <item>@array/truck_spawn_wheel</item>
+        <item>@array/truck_spawn_bottom</item>
+        <item>@array/truck_spawn_trailer</item>
+        <item>@array/truck_spawn_cab</item>
+        <item>@array/truck_spawn_front</item>
+        <item>@array/truck_color_blue</item>
+        <item>@array/truck_color_red</item>
+        <item>@array/truck_color_green</item>
+    </array>
+    <array name="truck_target_back_wheel1">
+        <item>"Oval"</item>
+        <item>"Target"</item>
+        <item>20</item>
+        <item>280</item>
+        <item>60</item>
+        <item>320</item>
+    </array>
+    <array name="truck_target_back_wheel2">
+        <item>"Oval"</item>
+        <item>"Target"</item>
+        <item>70</item>
+        <item>280</item>
+        <item>110</item>
+        <item>320</item>
+    </array>
+    <array name="truck_target_mid_wheel1">
+        <item>"Oval"</item>
+        <item>"Target"</item>
+        <item>225</item>
+        <item>280</item>
+        <item>265</item>
+        <item>320</item>
+    </array>
+    <array name="truck_target_mid_wheel2">
+        <item>"Oval"</item>
+        <item>"Target"</item>
+        <item>275</item>
+        <item>280</item>
+        <item>315</item>
+        <item>320</item>
+    </array>
+    <array name="truck_target_front_wheel">
+        <item>"Oval"</item>
+        <item>"Target"</item>
+        <item>390</item>
+        <item>280</item>
+        <item>430</item>
+        <item>320</item>
+    </array>
+    <array name="truck_target_bottom">
+        <item>"Rect"</item>
+        <item>"Target"</item>
+        <item>15</item>
+        <item>260</item>
+        <item>435</item>
+        <item>275</item>
+    </array>
+    <array name="truck_target_trailer">
+        <item>"Rect"</item>
+        <item>"Target"</item>
+        <item>20</item>
+        <item>190</item>
+        <item>270</item>
+        <item>255</item>
+    </array>
+    <array name="truck_target_cab">
+        <item>"Rect"</item>
+        <item>"Target"</item>
+        <item>280</item>
+        <item>190</item>
+        <item>335</item>
+        <item>255</item>
+    </array>
+    <array name="truck_target_front">
+        <item>"Rect"</item>
+        <item>"Target"</item>
+        <item>345</item>
+        <item>215</item>
+        <item>430</item>
+        <item>255</item>
+    </array>
+    <array name="truck_spawn_wheel">
+        <item>"Oval"</item>
+        <item>"Spawn"</item>
+        <item>290</item>
+        <item>525</item>
+        <item>330</item>
+        <item>565</item>
+    </array>
+    <array name="truck_spawn_bottom">
+        <item>"Rect"</item>
+        <item>"Spawn"</item>
+        <item>25</item>
+        <item>500</item>
+        <item>445</item>
+        <item>515</item>
+    </array>
+    <array name="truck_spawn_trailer">
+        <item>"Rect"</item>
+        <item>"Spawn"</item>
+        <item>10</item>
+        <item>525</item>
+        <item>260</item>
+        <item>590</item>
+    </array>
+    <array name="truck_spawn_front">
+        <item>"Rect"</item>
+        <item>"Spawn"</item>
+        <item>30</item>
+        <item>445</item>
+        <item>115</item>
+        <item>485</item>
+    </array>
+    <array name="truck_spawn_cab">
+        <item>"Rect"</item>
+        <item>"Spawn"</item>
+        <item>180</item>
+        <item>425</item>
+        <item>235</item>
+        <item>490</item>
+    </array>
+    <array name="truck_color_blue">
+        <item>"Oval"</item>
+        <item>"Color"</item>
+        <item>200</item>
+        <item>525</item>
+        <item>240</item>
+        <item>565</item>
+        <item>"#0000FF"</item>
+    </array>
+    <array name="truck_color_red">
+        <item>"Oval"</item>
+        <item>"Color"</item>
+        <item>250</item>
+        <item>525</item>
+        <item>290</item>
+        <item>565</item>
+        <item>"#FF0000"</item>
+    </array>
+    <array name="truck_color_green">
+        <item>"Oval"</item>
+        <item>"Color"</item>
+        <item>310</item>
+        <item>525</item>
+        <item>350</item>
+        <item>565</item>
+        <item>"#00FF00"</item>
+    </array>
+
+</resources>
