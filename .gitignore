@@ -3,3 +3,5 @@
 /bin
 /bin/*
 /bin/gen/*
+bin/resources.ap_
+bin/classes.dex
