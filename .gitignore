@@ -1,6 +1,6 @@
-
+/
 bin
 /gen
-bin
-bin/*
-bin/gen/*
+/bin
+/bin/*
+/bin/gen/*
