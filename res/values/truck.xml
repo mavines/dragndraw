@@ -11,11 +11,13 @@
         <item>@array/truck_target_trailer</item>
         <item>@array/truck_target_cab</item>
         <item>@array/truck_target_front</item>
+        <item>@array/truck_target_triangle</item>
         <item>@array/truck_spawn_wheel</item>
         <item>@array/truck_spawn_bottom</item>
         <item>@array/truck_spawn_trailer</item>
         <item>@array/truck_spawn_cab</item>
         <item>@array/truck_spawn_front</item>
+        <item>@array/truck_spawn_triangle</item>
         <item>@array/truck_color_blue</item>
         <item>@array/truck_color_red</item>
         <item>@array/truck_color_green</item>
@@ -92,6 +94,20 @@
         <item>430</item>
         <item>255</item>
     </array>
+    <array name="truck_target_triangle">
+        <item>"Path"</item>
+        <item>"Target"</item>
+        <item>350</item>
+        <item>155</item>
+        <item>400</item>
+        <item>205</item>
+        <item>0</item>
+        <item>0</item>
+        <item>50</item>
+        <item>25</item>
+        <item>0</item>
+        <item>50</item>
+    </array>
     <array name="truck_spawn_wheel">
         <item>"Oval"</item>
         <item>"Spawn"</item>
@@ -123,6 +139,20 @@
         <item>445</item>
         <item>115</item>
         <item>485</item>
+    </array>
+    <array name="truck_spawn_triangle">
+        <item>"Path"</item>
+        <item>"Spawn"</item>
+        <item>290</item>
+        <item>420</item>
+        <item>340</item>
+        <item>470</item>
+        <item>0</item>
+        <item>0</item>
+        <item>50</item>
+        <item>25</item>
+        <item>0</item>
+        <item>50</item>
     </array>
     <array name="truck_spawn_cab">
         <item>"Rect"</item>

@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">DragonDrop</string>
+    <string name="app_name">Dragon Draw</string>
     <string name="menu_settings">Settings</string>
     <string name="title_activity_dragon_draw">Dragon Draw</string>
 </resources>
