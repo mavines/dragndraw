@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <array name="shapes" type="id">
+        <item>@array/shapes_target_circle1</item>
+        <item>@array/shapes_target_circle2</item>
+        <item>@array/shapes_target_circle3</item>
+        <item>@array/shapes_target_square1</item>
+        <item>@array/shapes_target_square2</item>
+        <item>@array/shapes_target_triangle1</item>
+    </array>
+    <array name="shapes_target_circle1">
+        <item>"Oval"</item>
+        <item>"Target"</item>
+        <item>20</item>
+        <item>20</item>
+        <item>60</item>
+        <item>60</item>
+    </array>
+    <array name="shapes_target_circle2">
+        <item>"Oval"</item>
+        <item>"Target"</item>
+        <item>80</item>
+        <item>100</item>
+        <item>120</item>
+        <item>140</item>
+    </array>
+    <array name="shapes_target_circle3">
+        <item>"Oval"</item>
+        <item>"Target"</item>
+        <item>20</item>
+        <item>200</item>
+        <item>60</item>
+        <item>240</item>
+    </array>
+    <array name="shapes_target_square1">
+        <item>"Rect"</item>
+        <item>"Target"</item>
+        <item>300</item>
+        <item>500</item>
+        <item>375</item>
+        <item>590</item>
+    </array>
+    <array name="shapes_target_square2">
+        <item>"Rect"</item>
+        <item>"Target"</item>
+        <item>150</item>
+        <item>300</item>
+        <item>225</item>
+        <item>390</item>
+    </array>
+    <array name="shapes_target_triangle1">
+        <item>"Path"</item>
+        <item>"Target"</item>
+        <item>150</item>
+        <item>150</item>
+        <item>250</item>
+        <item>250</item>
+        <item>0</item>
+        <item>0</item>
+        <item>100</item>
+        <item>100</item>
+        <item>0</item>
+        <item>100</item>
+    </array>
+
+</resources>

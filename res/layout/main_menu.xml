@@ -2,15 +2,17 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
+    android:background="@drawable/background"
     android:orientation="vertical" >
 
     <GridView
         android:id="@+id/gridview"
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
-        android:horizontalSpacing="20dip"
+        android:layout_margin="@dimen/padding_large"
+        android:horizontalSpacing="@dimen/padding_large"
         android:numColumns="2"
         android:stretchMode="columnWidth"
-        android:verticalSpacing="20dip" />
+        android:verticalSpacing="@dimen/padding_large" />
 
 </LinearLayout>

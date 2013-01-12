@@ -3,5 +3,6 @@
     <array name="pictures">
         <item>@array/train</item>
         <item>@array/truck</item>
+        <item>@array/shapes</item>
     </array>
 </resources>

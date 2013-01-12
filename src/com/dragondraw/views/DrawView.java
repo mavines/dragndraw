@@ -3,18 +3,25 @@ package com.dragondraw.views;
 import java.util.ArrayList;
 import java.util.List;
 
-import com.dragondraw.shape.MovableShape;
-import com.dragondraw.shape.ShapeFactory;
-import com.dragondraw.shape.ShapeSpawn;
-import com.dragondraw.shape.ShapeTarget;
-
+import android.app.Activity;
 import android.content.Context;
 import android.content.res.Resources;
 import android.content.res.TypedArray;
 import android.graphics.Canvas;
+import android.graphics.Point;
 import android.graphics.drawable.ShapeDrawable;
+import android.media.AudioManager;
+import android.media.SoundPool;
+import android.view.Display;
 import android.view.MotionEvent;
 import android.view.View;
+
+import com.dragondraw.R;
+import com.dragondraw.shape.MovableShape;
+import com.dragondraw.shape.ShapeFactory;
+import com.dragondraw.shape.ShapeSpawn;
+import com.dragondraw.shape.ShapeTarget;
+import com.dragondraw.utils.PixelTranslator;
 
 public class DrawView extends View {
 	private static final String TAG = "DrawView";
@@ -27,13 +34,29 @@ public class DrawView extends View {
 	private List<ShapeTarget> unfilledTargets = new ArrayList<ShapeTarget>();
 	private List<ShapeTarget> filledTargets = new ArrayList<ShapeTarget>();
 	private MovableShape activeShape;
-
+	private SoundPool sounds;
+	private int pieceFitsSound;
+	private int pickupPieceSound;
+	private int paintPieceSound;
+	private ShapeFactory shapeFactory;
+	
+	
 	public DrawView(Context context, int levelId) {
 		super(context);
 		setFocusable(true); // necessary for getting the touch events
-
+		sounds = new SoundPool(10, AudioManager.STREAM_MUSIC, 0);
+		pieceFitsSound = sounds.load(context, R.raw.piece_fits, 1);
+		pickupPieceSound = sounds.load(context, R.raw.pickup_piece, 1);
+		paintPieceSound = sounds.load(context, R.raw.paint_piece, 1);
+		
+		//Build the pixel translator.
+		Display display = ((Activity)context).getWindowManager().getDefaultDisplay();
+		Point displaySize = new Point();
+		display.getSize(displaySize);
+		PixelTranslator translator = new PixelTranslator(displaySize.x, displaySize.y);
+		shapeFactory = new ShapeFactory(translator);
+		
 		loadLevel(levelId);
-
 	}
 
 	private void loadLevel(int levelId) {
@@ -45,7 +68,7 @@ public class DrawView extends View {
 			TypedArray shapeArray = resources.obtainTypedArray(shapeId);
 			String shapeString = shapeArray.getString(1);
 
-			ShapeDrawable createdShape = ShapeFactory.createShape(shapeArray);
+			ShapeDrawable createdShape = shapeFactory.createShape(shapeArray);
 
 			// Put the created shape into the corresponding list.
 			if (shapeString.equals("Color")) {
@@ -101,6 +124,7 @@ public class DrawView extends View {
 				for (ShapeSpawn spawn : currentSpawns) {
 					if (spawn.getBounds().contains(touchedX, touchedY)) {
 						activeShape = spawn.spawnShape();
+						sounds.play(pickupPieceSound, 1.0f, 1.0f, 0, 0, 1.5f);
 						break;
 					}
 				}
@@ -119,10 +143,11 @@ public class DrawView extends View {
 							&& target.matchesTarget(activeShape)) {
 
 						// Snap the shape to the target and mark the target
-						// as filled.
+						// as filled and play a sound.
 						activeShape.moveShape(target.getBounds().centerX(),
 								target.getBounds().centerY());
 						target.fill();
+						sounds.play(pieceFitsSound, 1.0f, 10.f, 0, 0, 1.5f);
 						filledTargets.add(target);
 						unfilledTargets.remove(target);
 						activeShape = null;
@@ -144,6 +169,7 @@ public class DrawView extends View {
 					if (target.getBounds().contains(touchedX, touchedY)) {
 						int color = activeShape.getPaint().getColor();
 						target.getPaint().setColor(color);
+						sounds.play(paintPieceSound, 2.0f, 2.0f, 0, 0, 1.5f);
 					}
 				}
 				activeShape = null;

@@ -1,5 +1,7 @@
 package com.dragondraw.shape;
 
+import com.dragondraw.utils.PixelTranslator;
+
 import android.content.res.TypedArray;
 import android.graphics.Color;
 import android.graphics.Path;
@@ -11,19 +13,19 @@ import android.graphics.drawable.shapes.RectShape;
 import android.graphics.drawable.shapes.Shape;
 
 public class ShapeFactory {
-	public static ShapeDrawable createShape(TypedArray shapeArray) {
+	private PixelTranslator translator;
+	
+	public ShapeFactory(PixelTranslator translator) {
+		super();
+		this.translator = translator;
+	}
+
+	public ShapeDrawable createShape(TypedArray shapeArray) {
 		String shapeTypeString = shapeArray.getString(1);
 
 		Shape shape = getShape(shapeArray);
 
-		int left = shapeArray.getInt(2, 0);
-		int top = shapeArray.getInt(3, 0);
-		int right = shapeArray.getInt(4, 0);
-		int bottom = shapeArray.getInt(5, 0);
-
-		Rect bounds = new Rect(left, top, right, bottom);
-
-		ShapeDrawable resultingShape;
+				ShapeDrawable resultingShape;
 
 		if (shapeTypeString.equals("Target")) {
 			resultingShape = new ShapeTarget(shape);
@@ -38,12 +40,20 @@ public class ShapeFactory {
 			resultingShape = null;
 		}
 
+		
+		int left = shapeArray.getInt(2, 0);
+		int top = shapeArray.getInt(3, 0);
+		int right = shapeArray.getInt(4, 0);
+		int bottom = shapeArray.getInt(5, 0);
+
+		Rect bounds = translator.translateBounds(new Rect(left, top, right, bottom));
+
 		resultingShape.setBounds(bounds);
 
 		return resultingShape;
 	}
 
-	private static Shape getShape(TypedArray shapeArray) {
+	private Shape getShape(TypedArray shapeArray) {
 		String shapeString = shapeArray.getString(0);
 
 		if (shapeString.equals("Oval")) {
@@ -59,7 +69,7 @@ public class ShapeFactory {
 
 	}
 
-	private static Shape buildPathShape(TypedArray shapeArray) {
+	private Shape buildPathShape(TypedArray shapeArray) {
 		int left = shapeArray.getInt(2, 0);
 		int top = shapeArray.getInt(3, 0);
 		int right = shapeArray.getInt(4, 0);
