@@ -116,16 +116,9 @@ public class DrawView extends View {
 		switch (eventaction) {
 
 		case MotionEvent.ACTION_DOWN:
-			// If we aren't dragging a shape, see if we clicking on a spawn.
-			// If we are, create a shape.
+
 			if (activeShape == null) {
-				for (ShapeSpawn spawn : currentSpawns) {
-					if (spawn.getBounds().contains(touchedX, touchedY)) {
-						activeShape = spawn.spawnShape();
-						sounds.play(pickupPieceSound, 1.0f, 1.0f, 0, 0, 1.5f);
-						break;
-					}
-				}
+				activeShape = spawnShapeIfTouched(touchedX, touchedY);
 			}
 
 			break;
@@ -133,44 +126,14 @@ public class DrawView extends View {
 			if (activeShape != null) {
 				activeShape.moveShape(touchedX, touchedY);
 
-				// See if we have moved close to any unfilled targets
-				for (ShapeTarget target : unfilledTargets) {
-					// See if we hit the target and see if we match the
-					// shape of the target.
-					if (target.hitTarget(activeShape)
-							&& target.matchesTarget(activeShape)) {
-
-						// Snap the shape to the target and mark the target
-						// as filled and play a sound.
-						activeShape.moveShape(target.getBounds().centerX(),
-								target.getBounds().centerY());
-						target.fill();
-						sounds.play(pieceFitsSound, 1.0f, 10.f, 0, 0, 1.5f);
-						filledTargets.add(target);
-						unfilledTargets.remove(target);
-						activeShape = null;
-
-						// if that was the last target, switch to color spawns
-						if (unfilledTargets.isEmpty()) {
-							currentSpawns = colorSpawns;
-							setBackgroundResource(R.drawable.train_background_paint);
-						}
-						break;
-					}
-				}
+				snapIfNearTarget();
 			}
 			break;
 		case MotionEvent.ACTION_UP:
-			// Check to see if the color is close to a target.
-			// If it is, paint that target.
+
 			if (activeShape != null) {
-				for (ShapeTarget target : filledTargets) {
-					if (target.getBounds().contains(touchedX, touchedY)) {
-						int color = activeShape.getPaint().getColor();
-						target.getPaint().setColor(color);
-						sounds.play(paintPieceSound, 2.0f, 2.0f, 0, 0, 1.5f);
-					}
-				}
+				paintTargetIfClose(touchedX, touchedY);
+				//clear the active shape
 				activeShape = null;
 			}
 			break;
@@ -181,11 +144,67 @@ public class DrawView extends View {
 
 	}
 
+	private void paintTargetIfClose(int touchedX, int touchedY) {
+		// Check to see if the color is close to a target.
+		// If it is, paint that target.
+		if (unfilledTargets.isEmpty()) {
+			for (ShapeTarget target : filledTargets) {
+				if (target.getBounds().contains(touchedX, touchedY)) {
+					int color = activeShape.getPaint().getColor();
+					target.getPaint().setColor(color);
+					sounds.play(paintPieceSound, 2.0f, 2.0f, 0, 0, 1.5f);
+					break;
+				}
+			}
+		}
+	}
+
+	private void snapIfNearTarget() {
+		// See if we have moved close to any unfilled targets
+		for (ShapeTarget target : unfilledTargets) {
+			// See if we hit the target and see if we match the
+			// shape of the target.
+			if (target.hitTarget(activeShape)
+					&& target.matchesTarget(activeShape)) {
+
+				// Snap the shape to the target and mark the target
+				// as filled and play a sound.
+				activeShape.moveShape(target.getBounds().centerX(), target
+						.getBounds().centerY());
+				target.fill();
+				sounds.play(pieceFitsSound, 1.0f, 10.f, 0, 0, 1.5f);
+				filledTargets.add(target);
+				unfilledTargets.remove(target);
+				activeShape = null;
+
+				// if that was the last target, switch to color spawns
+				if (unfilledTargets.isEmpty()) {
+					currentSpawns = colorSpawns;
+					setBackgroundResource(R.drawable.train_background_paint);
+				}
+				break;
+			}
+		}
+	}
+
+	private MovableShape spawnShapeIfTouched(int touchedX, int touchedY) {
+		// If we aren't dragging a shape, see if we clicking on a spawn.
+		// If we are, create a shape.
+		for (ShapeSpawn spawn : currentSpawns) {
+			if (spawn.getBounds().contains(touchedX, touchedY)) {
+				sounds.play(pickupPieceSound, 1.0f, 1.0f, 0, 0, 1.5f);
+				return spawn.spawnShape();
+			}
+		}
+
+		return null;
+	}
+
 	@Override
 	protected void onSizeChanged(int w, int h, int oldw, int oldh) {
 		super.onSizeChanged(w, h, oldw, oldh);
 
-		if (this.width != w || this.height != h) {
+		if (this.width == 0 && this.height == 0) {
 			this.width = w;
 			this.height = h;
 			PixelTranslator translator = new PixelTranslator(width, height);

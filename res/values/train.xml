@@ -45,64 +45,64 @@
     <array name="train_target_back_wheel2">
         <item>"Oval"</item>
         <item>"Target"</item>
-        <item>87</item>
+        <item>75</item>
         <item>247</item>
-        <item>125</item>
+        <item>113</item>
         <item>285</item>
     </array>
     <array name="train_target_middle_wheel1">
         <item>"Oval"</item>
         <item>"Target"</item>
-        <item>127</item>
+        <item>125</item>
         <item>247</item>
-        <item>165</item>
+        <item>163</item>
         <item>285</item>
     </array>
     <array name="train_target_middle_wheel2">
         <item>"Oval"</item>
         <item>"Target"</item>
-        <item>194</item>
+        <item>188</item>
         <item>247</item>
-        <item>232</item>
+        <item>226</item>
         <item>285</item>
     </array>
     <array name="train_target_front_wheel1">
         <item>"Oval"</item>
         <item>"Target"</item>
-        <item>242</item>
+        <item>235</item>
         <item>247</item>
-        <item>280</item>
+        <item>273</item>
         <item>285</item>
     </array>
     <array name="train_target_front_wheel2">
         <item>"Oval"</item>
         <item>"Target"</item>
-        <item>290</item>
+        <item>278</item>
         <item>247</item>
-        <item>328</item>
+        <item>316</item>
         <item>285</item>
     </array>
     <array name="train_target_front_wheel3">
         <item>"Oval"</item>
         <item>"Target"</item>
-        <item>342</item>
+        <item>340</item>
         <item>247</item>
-        <item>380</item>
+        <item>378</item>
         <item>285</item>
     </array>
     <array name="train_target_back_roof">
         <item>"Rect"</item>
         <item>"Target"</item>
         <item>12</item>
-        <item>144</item>
+        <item>124</item>
         <item>112</item>
-        <item>159</item>
+        <item>149</item>
     </array>
     <array name="train_target_back_floor">
         <item>"Rect"</item>
         <item>"Target"</item>
         <item>12</item>
-        <item>228</item>
+        <item>218</item>
         <item>112</item>
         <item>243</item>
     </array>
@@ -110,15 +110,15 @@
         <item>"Rect"</item>
         <item>"Target"</item>
         <item>18</item>
-        <item>164</item>
+        <item>154</item>
         <item>106</item>
-        <item>223</item>
+        <item>213</item>
     </array>
     <array name="train_target_middle_floor">
         <item>"Rect"</item>
         <item>"Target"</item>
         <item>121</item>
-        <item>228</item>
+        <item>218</item>
         <item>221</item>
         <item>243</item>
     </array>
@@ -126,15 +126,15 @@
         <item>"Rect"</item>
         <item>"Target"</item>
         <item>127</item>
-        <item>164</item>
+        <item>154</item>
         <item>215</item>
-        <item>223</item>
+        <item>213</item>
     </array>
     <array name="train_target_front_floor">
         <item>"Rect"</item>
         <item>"Target"</item>
         <item>230</item>
-        <item>228</item>
+        <item>218</item>
         <item>373</item>
         <item>243</item>
     </array>
@@ -142,31 +142,31 @@
         <item>"Rect"</item>
         <item>"Target"</item>
         <item>282</item>
-        <item>164</item>
+        <item>154</item>
         <item>370</item>
-        <item>223</item>
+        <item>213</item>
     </array>
     <array name="train_target_front_upright">
         <item>"Rect"</item>
         <item>"Target"</item>
         <item>234</item>
-        <item>123</item>
+        <item>113</item>
         <item>278</item>
-        <item>223</item>
+        <item>213</item>
     </array>
     <array name="train_target_front_top">
         <item>"Rect"</item>
         <item>"Target"</item>
         <item>225</item>
-        <item>104</item>
+        <item>84</item>
         <item>288</item>
-        <item>119</item>
+        <item>109</item>
     </array>
     <array name="train_spawn_floor">
         <item>"Rect"</item>
         <item>"Spawn"</item>
         <item>125</item>
-        <item>490</item>
+        <item>480</item>
         <item>225</item>
         <item>505</item>
     </array>
@@ -190,7 +190,7 @@
         <item>"Rect"</item>
         <item>"Spawn"</item>
         <item>125</item>
-        <item>425</item>
+        <item>415</item>
         <item>188</item>
         <item>440</item>
     </array>
@@ -198,7 +198,7 @@
         <item>"Rect"</item>
         <item>"Spawn"</item>
         <item>30</item>
-        <item>550</item>
+        <item>540</item>
         <item>173</item>
         <item>565</item>
     </array>
