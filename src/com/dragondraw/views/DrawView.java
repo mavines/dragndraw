@@ -9,6 +9,7 @@ import android.content.res.Resources;
 import android.content.res.TypedArray;
 import android.graphics.Canvas;
 import android.graphics.Point;
+import android.graphics.Rect;
 import android.graphics.drawable.ShapeDrawable;
 import android.media.AudioManager;
 import android.media.SoundPool;
@@ -39,8 +40,10 @@ public class DrawView extends View {
 	private int pickupPieceSound;
 	private int paintPieceSound;
 	private ShapeFactory shapeFactory;
-	
-	
+	private int height;
+	private int width;
+	private int levelId;
+
 	public DrawView(Context context, int levelId) {
 		super(context);
 		setFocusable(true); // necessary for getting the touch events
@@ -48,15 +51,8 @@ public class DrawView extends View {
 		pieceFitsSound = sounds.load(context, R.raw.piece_fits, 1);
 		pickupPieceSound = sounds.load(context, R.raw.pickup_piece, 1);
 		paintPieceSound = sounds.load(context, R.raw.paint_piece, 1);
-		
-		//Build the pixel translator.
-		Display display = ((Activity)context).getWindowManager().getDefaultDisplay();
-		Point displaySize = new Point();
-		display.getSize(displaySize);
-		PixelTranslator translator = new PixelTranslator(displaySize.x, displaySize.y);
-		shapeFactory = new ShapeFactory(translator);
-		
-		loadLevel(levelId);
+		this.levelId = levelId;
+		setBackgroundResource(R.drawable.train_background);
 	}
 
 	private void loadLevel(int levelId) {
@@ -98,8 +94,10 @@ public class DrawView extends View {
 			filledTarget.draw(canvas);
 		}
 
-		for (ShapeSpawn spawn : currentSpawns) {
-			spawn.draw(canvas);
+		if (!unfilledTargets.isEmpty()) {
+			for (ShapeSpawn spawn : currentSpawns) {
+				spawn.draw(canvas);
+			}
 		}
 
 		if (activeShape != null) {
@@ -151,11 +149,12 @@ public class DrawView extends View {
 						filledTargets.add(target);
 						unfilledTargets.remove(target);
 						activeShape = null;
-						
-						//if that was the last target, switch to color spawns
-						if(unfilledTargets.isEmpty()){
+
+						// if that was the last target, switch to color spawns
+						if (unfilledTargets.isEmpty()) {
 							currentSpawns = colorSpawns;
-						}						
+							setBackgroundResource(R.drawable.train_background_paint);
+						}
 						break;
 					}
 				}
@@ -181,4 +180,19 @@ public class DrawView extends View {
 		return true;
 
 	}
+
+	@Override
+	protected void onSizeChanged(int w, int h, int oldw, int oldh) {
+		super.onSizeChanged(w, h, oldw, oldh);
+
+		if (this.width != w || this.height != h) {
+			this.width = w;
+			this.height = h;
+			PixelTranslator translator = new PixelTranslator(width, height);
+
+			shapeFactory = new ShapeFactory(translator);
+			loadLevel(levelId);
+		}
+	}
+
 }

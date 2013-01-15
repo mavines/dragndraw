@@ -61,5 +61,6 @@ public class ShapeTarget extends ShapeDrawable {
 		Paint filledPaint = this.getPaint();
 
 		filledPaint.setStyle(Style.FILL);
+		filledPaint.setAntiAlias(true);
 	}
 }
