@@ -15,6 +15,7 @@ public class DragonDraw extends Activity {
         if (extras != null) {
             long pictureKey = extras.getLong(PICTURE_KEY);
             // draw the view
+//            setContentView(R.layout.activity_dragon_draw);
             setContentView(new DrawView(this, (int)pictureKey));
         }
     }

@@ -27,7 +27,6 @@
         <item>@array/train_color_blue</item>
         <item>@array/train_color_red</item>
         <item>@array/train_color_green</item>
-        <item>@array/train_color_gray</item>
         <item>@array/train_color_yellow</item>
         <item>@array/train_color_orange</item>
         <item>@array/train_color_pink</item>
@@ -165,131 +164,123 @@
     <array name="train_spawn_floor">
         <item>"Rect"</item>
         <item>"Spawn"</item>
-        <item>125</item>
-        <item>480</item>
-        <item>225</item>
-        <item>505</item>
+        <item>78</item>
+        <item>414</item>
+        <item>178</item>
+        <item>439</item>
     </array>
     <array name="train_spawn_body">
         <item>"Rect"</item>
         <item>"Spawn"</item>
-        <item>200</item>
-        <item>415</item>
-        <item>288</item>
-        <item>474</item>
+        <item>30</item>
+        <item>460</item>
+        <item>118</item>
+        <item>519</item>
     </array>
     <array name="train_spawn_upright">
         <item>"Rect"</item>
         <item>"Spawn"</item>
-        <item>270</item>
-        <item>485</item>
-        <item>314</item>
-        <item>585</item>
+        <item>301</item>
+        <item>413</item>
+        <item>345</item>
+        <item>513</item>
     </array>
     <array name="train_spawn_front_roof">
         <item>"Rect"</item>
         <item>"Spawn"</item>
-        <item>125</item>
-        <item>415</item>
-        <item>188</item>
-        <item>440</item>
+        <item>201</item>
+        <item>414</item>
+        <item>264</item>
+        <item>439</item>
     </array>
     <array name="train_spawn_front_floor">
         <item>"Rect"</item>
         <item>"Spawn"</item>
-        <item>30</item>
-        <item>540</item>
-        <item>173</item>
-        <item>565</item>
+        <item>138</item>
+        <item>478</item>
+        <item>281</item>
+        <item>503</item>
     </array>
     <array name="train_spawn_wheel">
         <item>"Oval"</item>
         <item>"Spawn"</item>
-        <item>18</item>
-        <item>423</item>
-        <item>56</item>
-        <item>461</item>
+        <item>21</item>
+        <item>408</item>
+        <item>59</item>
+        <item>446</item>
     </array>
     <array name="train_color_red">
         <item>"Oval"</item>
         <item>"Color"</item>
-        <item>17</item>
-        <item>424</item>
-        <item>92</item>
-        <item>464</item>
+        <item>0</item>
+        <item>406</item>
+        <item>108</item>
+        <item>486</item>
         <item>"#db2929"</item>
     </array>
     <array name="train_color_green">
         <item>"Oval"</item>
         <item>"Color"</item>
-        <item>169</item>
-        <item>421</item>
-        <item>260</item>
-        <item>470</item>
+        <item>132</item>
+        <item>406</item>
+        <item>254</item>
+        <item>486</item>
         <item>"#32a232"</item>
     </array>
     <array name="train_color_blue">
         <item>"Oval"</item>
         <item>"Color"</item>
-        <item>296</item>
-        <item>431</item>
+        <item>270</item>
+        <item>406</item>
         <item>387</item>
-        <item>488</item>
+        <item>486</item>
         <item>"#3d54ff"</item>
-    </array>
-    <array name="train_color_gray">
-        <item>"Oval"</item>
-        <item>"Color"</item>
-        <item>12</item>
-        <item>535</item>
-        <item>98</item>
-        <item>595</item>
-        <item>"#73757d"</item>
     </array>
     <array name="train_color_orange">
         <item>"Oval"</item>
         <item>"Color"</item>
-        <item>142</item>
-        <item>529</item>
-        <item>229</item>
-        <item>595</item>
+        <item>0</item>
+        <item>498</item>
+        <item>114</item>
+        <item>569</item>
         <item>"#e0711f"</item>
     </array>
     <array name="train_color_yellow">
         <item>"Oval"</item>
         <item>"Color"</item>
-        <item>298</item>
-        <item>539</item>
-        <item>388</item>
-        <item>600</item>
+        <item>120</item>
+        <item>498</item>
+        <item>243</item>
+        <item>569</item>
         <item>"#f9f618"</item>
+    </array>
+    <array name="train_color_pink">
+        <item>"Oval"</item>
+        <item>"Color"</item>
+        <item>250</item>
+        <item>498</item>
+        <item>370</item>
+        <item>569</item>
+        <item>"#f6289c"</item>
     </array>
     <array name="train_color_purple">
         <item>"Oval"</item>
         <item>"Color"</item>
-        <item>46</item>
-        <item>626</item>
-        <item>135</item>
-        <item>677</item>
+        <item>8</item>
+        <item>593</item>
+        <item>114</item>
+        <item>672</item>
         <item>"#8f21d5"</item>
     </array>
     <array name="train_color_cyan">
         <item>"Oval"</item>
         <item>"Color"</item>
-        <item>158</item>
-        <item>616</item>
-        <item>250</item>
-        <item>670</item>
+        <item>127</item>
+        <item>593</item>
+        <item>244</item>
+        <item>672</item>
         <item>"#15bca6"</item>
     </array>
-    <array name="train_color_pink">
-        <item>"Oval"</item>
-        <item>"Color"</item>
-        <item>274</item>
-        <item>614</item>
-        <item>368</item>
-        <item>670</item>
-        <item>"#f6289c"</item>
-    </array>
+
 
 </resources>

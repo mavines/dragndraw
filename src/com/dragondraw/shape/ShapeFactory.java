@@ -1,7 +1,6 @@
 package com.dragondraw.shape;
 
-import com.dragondraw.utils.PixelTranslator;
-
+import android.content.Context;
 import android.content.res.TypedArray;
 import android.graphics.Color;
 import android.graphics.Path;
@@ -12,11 +11,16 @@ import android.graphics.drawable.shapes.PathShape;
 import android.graphics.drawable.shapes.RectShape;
 import android.graphics.drawable.shapes.Shape;
 
+import com.dragondraw.R;
+import com.dragondraw.utils.PixelTranslator;
+
 public class ShapeFactory {
 	private PixelTranslator translator;
-	
-	public ShapeFactory(PixelTranslator translator) {
+	private Context context;
+
+	public ShapeFactory(Context context, PixelTranslator translator) {
 		super();
+		this.context = context;
 		this.translator = translator;
 	}
 
@@ -25,12 +29,15 @@ public class ShapeFactory {
 
 		Shape shape = getShape(shapeArray);
 
-				ShapeDrawable resultingShape;
+		ShapeDrawable resultingShape;
+
+		int defaultColor = context.getResources().getColor(R.color.brown);
 
 		if (shapeTypeString.equals("Target")) {
 			resultingShape = new ShapeTarget(shape);
 		} else if (shapeTypeString.equals("Spawn")) {
 			resultingShape = new ShapeSpawn(shape);
+			resultingShape.getPaint().setColor(defaultColor);
 		} else if (shapeTypeString.equals("Color")) {
 			int color = Color.parseColor(shapeArray.getString(6));
 			resultingShape = new ShapeSpawn(shape);
@@ -40,13 +47,13 @@ public class ShapeFactory {
 			resultingShape = null;
 		}
 
-		
 		int left = shapeArray.getInt(2, 0);
 		int top = shapeArray.getInt(3, 0);
 		int right = shapeArray.getInt(4, 0);
 		int bottom = shapeArray.getInt(5, 0);
 
-		Rect bounds = translator.translateBounds(new Rect(left, top, right, bottom));
+		Rect bounds = translator.translateBounds(new Rect(left, top, right,
+				bottom));
 
 		resultingShape.setBounds(bounds);
 
@@ -84,9 +91,9 @@ public class ShapeFactory {
 		while (pointIndex < shapeArray.length()) {
 			int x = shapeArray.getInt(pointIndex, 0);
 			int y = shapeArray.getInt(pointIndex + 1, 0);
-			
+
 			shapePath.lineTo(x, y);
-			
+
 			pointIndex = pointIndex + 2;
 		}
 		shapePath.close();

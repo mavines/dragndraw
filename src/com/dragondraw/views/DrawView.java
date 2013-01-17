@@ -3,17 +3,13 @@ package com.dragondraw.views;
 import java.util.ArrayList;
 import java.util.List;
 
-import android.app.Activity;
 import android.content.Context;
 import android.content.res.Resources;
 import android.content.res.TypedArray;
 import android.graphics.Canvas;
-import android.graphics.Point;
-import android.graphics.Rect;
 import android.graphics.drawable.ShapeDrawable;
 import android.media.AudioManager;
 import android.media.SoundPool;
-import android.view.Display;
 import android.view.MotionEvent;
 import android.view.View;
 
@@ -172,6 +168,8 @@ public class DrawView extends View {
 				activeShape.moveShape(target.getBounds().centerX(), target
 						.getBounds().centerY());
 				target.fill();
+				int color = activeShape.getPaint().getColor();
+				target.getPaint().setColor(color);
 				sounds.play(pieceFitsSound, 1.0f, 10.f, 0, 0, 1.5f);
 				filledTargets.add(target);
 				unfilledTargets.remove(target);
@@ -209,7 +207,7 @@ public class DrawView extends View {
 			this.height = h;
 			PixelTranslator translator = new PixelTranslator(width, height);
 
-			shapeFactory = new ShapeFactory(translator);
+			shapeFactory = new ShapeFactory(super.getContext(), translator);
 			loadLevel(levelId);
 		}
 	}
