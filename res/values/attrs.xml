@@ -1,0 +1,7 @@
+<resources>
+    <declare-styleable name="DrawView">
+        <attr name="level_id" format="integer|reference" />
+        <attr name="background_image" format="integer|reference" />
+        <attr name="background_paint_image" format="integer|reference" />
+    </declare-styleable>
+</resources>

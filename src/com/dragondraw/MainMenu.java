@@ -79,6 +79,6 @@ public class MainMenu extends Activity {
 
 		// references to our images
 		private Integer[] mThumbIds = { R.drawable.train_icon,
-				R.drawable.truck_icon, R.drawable.shapetest };
+				R.drawable.truck_icon };
 	}
 }

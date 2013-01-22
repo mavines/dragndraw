@@ -1,6 +1,5 @@
 package com.dragondraw.shape;
 
-import com.dragondraw.R;
 
 import android.graphics.Rect;
 import android.graphics.drawable.ShapeDrawable;

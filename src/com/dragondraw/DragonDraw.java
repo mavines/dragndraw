@@ -2,8 +2,8 @@ package com.dragondraw;
 
 import android.app.Activity;
 import android.os.Bundle;
-
-import com.dragondraw.views.DrawView;
+import android.view.View;
+import android.widget.Button;
 
 public class DragonDraw extends Activity {
 	public static final String PICTURE_KEY = "PictureId";
@@ -13,10 +13,17 @@ public class DragonDraw extends Activity {
         
         Bundle extras = getIntent().getExtras();
         if (extras != null) {
-            long pictureKey = extras.getLong(PICTURE_KEY);
+            int levelId = (int)extras.getLong(PICTURE_KEY);
             // draw the view
-//            setContentView(R.layout.activity_dragon_draw);
-            setContentView(new DrawView(this, (int)pictureKey));
+            setContentView(levelId);
+
+            //Setup the button listener           
+            final Button button = (Button) findViewById(R.id.back_button);
+            button.setOnClickListener(new View.OnClickListener() {
+                public void onClick(View v) {
+                	onBackPressed();
+                }
+            });
         }
     }
     

@@ -10,10 +10,15 @@ import android.graphics.Canvas;
 import android.graphics.drawable.ShapeDrawable;
 import android.media.AudioManager;
 import android.media.SoundPool;
+import android.util.AttributeSet;
 import android.view.MotionEvent;
 import android.view.View;
 
 import com.dragondraw.R;
+import com.dragondraw.R.array;
+import com.dragondraw.R.drawable;
+import com.dragondraw.R.raw;
+import com.dragondraw.R.styleable;
 import com.dragondraw.shape.MovableShape;
 import com.dragondraw.shape.ShapeFactory;
 import com.dragondraw.shape.ShapeSpawn;
@@ -35,20 +40,37 @@ public class DrawView extends View {
 	private int pieceFitsSound;
 	private int pickupPieceSound;
 	private int paintPieceSound;
+	private int backgroundResource;
+	private int backgroundPaintResource;
 	private ShapeFactory shapeFactory;
 	private int height;
 	private int width;
 	private int levelId;
 
-	public DrawView(Context context, int levelId) {
-		super(context);
+	
+	
+	public DrawView(Context context, AttributeSet attributes) {
+		super(context, attributes);
 		setFocusable(true); // necessary for getting the touch events
+		initSounds(context);
+		initAttributes(context, attributes);
+		
+		setBackgroundResource(backgroundResource);
+	}
+	
+	private void initAttributes(Context context, AttributeSet attributes)
+	{
+		TypedArray attributeArray = context.obtainStyledAttributes(attributes, R.styleable.DrawView);
+		this.levelId = attributeArray.getResourceId(R.styleable.DrawView_level_id, R.array.train);
+		this.backgroundResource = attributeArray.getResourceId(R.styleable.DrawView_background_image, R.drawable.train_background);
+		this.backgroundPaintResource = attributeArray.getResourceId(R.styleable.DrawView_background_paint_image, R.drawable.train_background_paint);
+	}
+
+	private void initSounds(Context context) {
 		sounds = new SoundPool(10, AudioManager.STREAM_MUSIC, 0);
 		pieceFitsSound = sounds.load(context, R.raw.piece_fits, 1);
 		pickupPieceSound = sounds.load(context, R.raw.pickup_piece, 1);
 		paintPieceSound = sounds.load(context, R.raw.paint_piece, 1);
-		this.levelId = levelId;
-		setBackgroundResource(R.drawable.train_background);
 	}
 
 	private void loadLevel(int levelId) {
@@ -148,7 +170,7 @@ public class DrawView extends View {
 				if (target.getBounds().contains(touchedX, touchedY)) {
 					int color = activeShape.getPaint().getColor();
 					target.getPaint().setColor(color);
-					sounds.play(paintPieceSound, 2.0f, 2.0f, 0, 0, 1.5f);
+					sounds.play(paintPieceSound, 5.0f, 5.0f, 0, 0, 1.5f);
 					break;
 				}
 			}
@@ -170,7 +192,7 @@ public class DrawView extends View {
 				target.fill();
 				int color = activeShape.getPaint().getColor();
 				target.getPaint().setColor(color);
-				sounds.play(pieceFitsSound, 1.0f, 10.f, 0, 0, 1.5f);
+				sounds.play(pieceFitsSound, 3.0f, 3.f, 0, 0, 1.5f);
 				filledTargets.add(target);
 				unfilledTargets.remove(target);
 				activeShape = null;
@@ -178,7 +200,7 @@ public class DrawView extends View {
 				// if that was the last target, switch to color spawns
 				if (unfilledTargets.isEmpty()) {
 					currentSpawns = colorSpawns;
-					setBackgroundResource(R.drawable.train_background_paint);
+					setBackgroundResource(backgroundPaintResource);
 				}
 				break;
 			}
@@ -190,7 +212,7 @@ public class DrawView extends View {
 		// If we are, create a shape.
 		for (ShapeSpawn spawn : currentSpawns) {
 			if (spawn.getBounds().contains(touchedX, touchedY)) {
-				sounds.play(pickupPieceSound, 1.0f, 1.0f, 0, 0, 1.5f);
+				sounds.play(pickupPieceSound, 3.0f, 3.0f, 0, 0, 1.5f);
 				return spawn.spawnShape();
 			}
 		}
