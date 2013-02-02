@@ -15,10 +15,6 @@ import android.view.MotionEvent;
 import android.view.View;
 
 import com.dragondraw.R;
-import com.dragondraw.R.array;
-import com.dragondraw.R.drawable;
-import com.dragondraw.R.raw;
-import com.dragondraw.R.styleable;
 import com.dragondraw.shape.MovableShape;
 import com.dragondraw.shape.ShapeFactory;
 import com.dragondraw.shape.ShapeSpawn;
@@ -40,6 +36,7 @@ public class DrawView extends View {
 	private int pieceFitsSound;
 	private int pickupPieceSound;
 	private int paintPieceSound;
+	private int randomSound;
 	private int backgroundResource;
 	private int backgroundPaintResource;
 	private ShapeFactory shapeFactory;
@@ -64,6 +61,8 @@ public class DrawView extends View {
 		this.levelId = attributeArray.getResourceId(R.styleable.DrawView_level_id, R.array.train);
 		this.backgroundResource = attributeArray.getResourceId(R.styleable.DrawView_background_image, R.drawable.train_background);
 		this.backgroundPaintResource = attributeArray.getResourceId(R.styleable.DrawView_background_paint_image, R.drawable.train_background_paint);
+		int soundResource = attributeArray.getResourceId(R.styleable.DrawView_random_sound, R.raw.train_whistle);
+		this.randomSound = sounds.load(context, soundResource, 1); 
 	}
 
 	private void initSounds(Context context) {
@@ -161,6 +160,16 @@ public class DrawView extends View {
 		return true;
 
 	}
+	
+	private void maybePlayRandomSound()
+	{
+		int randomNumber = (int)(Math.random() * 10);
+		if(randomNumber > 7)
+		{
+			sounds.play(randomSound, 5.0f, 5.0f, 0, 0, 1.0f);
+		}
+			
+	}
 
 	private void paintTargetIfClose(int touchedX, int touchedY) {
 		// Check to see if the color is close to a target.
@@ -171,6 +180,7 @@ public class DrawView extends View {
 					int color = activeShape.getPaint().getColor();
 					target.getPaint().setColor(color);
 					sounds.play(paintPieceSound, 5.0f, 5.0f, 0, 0, 1.5f);
+					maybePlayRandomSound();
 					break;
 				}
 			}
@@ -196,7 +206,7 @@ public class DrawView extends View {
 				filledTargets.add(target);
 				unfilledTargets.remove(target);
 				activeShape = null;
-
+				maybePlayRandomSound();
 				// if that was the last target, switch to color spawns
 				if (unfilledTargets.isEmpty()) {
 					currentSpawns = colorSpawns;

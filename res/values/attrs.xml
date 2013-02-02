@@ -3,5 +3,6 @@
         <attr name="level_id" format="integer|reference" />
         <attr name="background_image" format="integer|reference" />
         <attr name="background_paint_image" format="integer|reference" />
+        <attr name="random_sound" format="integer|reference" />
     </declare-styleable>
 </resources>

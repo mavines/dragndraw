@@ -21,6 +21,6 @@
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_alignParentRight="true"
-        android:text="@string/menu_settings" />
+        android:background="@drawable/back_button"  />
 
 </RelativeLayout>

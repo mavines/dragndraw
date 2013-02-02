@@ -13,14 +13,16 @@
         android:padding="@dimen/padding_medium"
         drawview:background_image="@drawable/train_background"
         drawview:background_paint_image="@drawable/train_background_paint"
-        drawview:level_id="@array/train" />
+        drawview:level_id="@array/train"
+        drawview:random_sound="@raw/train_whistle" />
 
     <Button
         android:id="@+id/back_button"
+        style="android:buttonStyle"
         android:layout_width="96dp"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_alignParentRight="true"
-        android:text="@string/paint_button_text" />
+        android:background="@drawable/back_button" />
 
 </RelativeLayout>
