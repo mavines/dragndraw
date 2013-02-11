@@ -11,8 +11,8 @@
         android:layout_centerHorizontal="true"
         android:layout_centerVertical="true"
         android:padding="@dimen/padding_medium"
-        drawview:background_image="@drawable/train_background"
-        drawview:background_paint_image="@drawable/train_background_paint"
+        drawview:background_image="@drawable/truck_background"
+        drawview:background_paint_image="@drawable/truck_background_paint"
         drawview:level_id="@array/truck" />
 
     <Button
