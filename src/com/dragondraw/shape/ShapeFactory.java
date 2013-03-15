@@ -88,11 +88,20 @@ public class ShapeFactory {
 		Path shapePath = new Path();
 
 		int pointIndex = 6;
+		boolean firstPoint = true;
 		while (pointIndex < shapeArray.length()) {
 			int x = shapeArray.getInt(pointIndex, 0);
 			int y = shapeArray.getInt(pointIndex + 1, 0);
 
-			shapePath.lineTo(x, y);
+			//Move the start of the path to the first point
+			if(firstPoint)
+			{
+				shapePath.moveTo(x, y);
+				firstPoint = false;
+			}
+			else{
+				shapePath.lineTo(x, y);
+			}
 
 			pointIndex = pointIndex + 2;
 		}

@@ -66,9 +66,12 @@ public class MainMenu extends Activity {
 			if (convertView == null) { // if it's not recycled, initialize some
 										// attributes
 				imageView = new ImageView(mContext);
-				int height = getResources().getDimensionPixelSize(R.dimen.icon_height);
-				int width = getResources().getDimensionPixelSize(R.dimen.icon_width);
-				imageView.setLayoutParams(new GridView.LayoutParams(width, height));
+				int height = getResources().getDimensionPixelSize(
+						R.dimen.icon_height);
+				int width = getResources().getDimensionPixelSize(
+						R.dimen.icon_width);
+				imageView.setLayoutParams(new GridView.LayoutParams(width,
+						height));
 				imageView.setScaleType(ImageView.ScaleType.CENTER_INSIDE);
 				imageView.setPadding(8, 8, 8, 8);
 			} else {
@@ -81,8 +84,8 @@ public class MainMenu extends Activity {
 
 		// references to our images
 		private Integer[] mThumbIds = { R.drawable.train_icon,
-				R.drawable.truck_icon, R.drawable.boat_icon,
-				R.drawable.bus_icon, R.drawable.castle_icon,
-				R.drawable.spaceship_icon };
+				R.drawable.truck_icon, R.drawable.spaceship_icon,
+				R.drawable.boat_icon, R.drawable.bus_icon,
+				R.drawable.castle_icon };
 	}
 }

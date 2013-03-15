@@ -66,6 +66,7 @@ public class ShapeTarget extends ShapeDrawable {
 		Paint unfilledPaint = this.getPaint();
 
 		unfilledPaint.setStyle(Style.STROKE);
+		unfilledPaint.setColor(Color.RED);
 		unfilledPaint.setStrokeWidth(3);
 		unfilledPaint.setAntiAlias(true);
 		unfilledPaint
