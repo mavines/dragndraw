@@ -10,22 +10,19 @@
         <item>@array/ufo_target_right_lower_triangle</item>
         <item>@array/ufo_target_right_top_triangle</item>
         <item>@array/ufo_target_right_bottom_triangle</item>
-        <!--<item>@array/ufo_target_left_foot</item>
-        <item>@array/ufo_target_right_foot</item>-->
+        <item>@array/ufo_target_left_foot</item>
+        <item>@array/ufo_target_right_foot</item>
         <item>@array/ufo_target_left_upper_rect</item>
         <item>@array/ufo_target_left_lower_rect</item>
         <item>@array/ufo_target_top_rect</item>
         <item>@array/ufo_target_bottom_rect</item>
-     <item>@array/ufo_target_right_upper_rect</item>
+        <item>@array/ufo_target_right_upper_rect</item>
         <item>@array/ufo_target_right_lower_rect</item>
-  <!--         <item>@array/ufo_target_left_upper_circle</item>
-        <item>@array/ufo_target_left_lower_circle</item>
-        <item>@array/ufo_target_right_upper_circle</item>
-        <item>@array/ufo_target_right_lower_circle</item> -->
+        <item>@array/ufo_target_center_circle</item>
         <item>@array/ufo_target_left_circle</item>
         <item>@array/ufo_target_right_circle</item>
         <item>@array/ufo_target_top_circle</item>
- 		<item>@array/ufo_target_antenna</item>
+        <item>@array/ufo_target_antenna</item>
         <item>@array/ufo_spawn_wheel</item>
         <item>@array/ufo_spawn_bottom</item>
         <item>@array/ufo_spawn_trailer</item>
@@ -101,9 +98,9 @@
         <item>"Path"</item>
         <item>"Target"</item>
         <item>290</item>
-        <item>148</item>
+        <item>153</item>
         <item>345</item>
-        <item>183</item>
+        <item>178</item>
         <item>0</item>
         <item>0</item>
         <item>55</item>
@@ -156,30 +153,30 @@
     <array name="ufo_target_left_foot">
         <item>"Path"</item>
         <item>"Target"</item>
-        <item>240</item>
-        <item>175</item>
-        <item>285</item>
-        <item>210</item>
+        <item>110</item>
+        <item>243</item>
+        <item>165</item>
+        <item>268</item>
         <item>0</item>
+        <item>25</item>
+        <item>55</item>
         <item>0</item>
-        <item>45</item>
-        <item>35</item>
-        <item>0</item>
-        <item>35</item>
+        <item>55</item>
+        <item>25</item>
     </array>
     <array name="ufo_target_right_foot">
         <item>"Path"</item>
         <item>"Target"</item>
-        <item>240</item>
-        <item>175</item>
-        <item>285</item>
-        <item>210</item>
+        <item>230</item>
+        <item>243</item>
+        <item>255</item>
+        <item>268</item>
         <item>0</item>
         <item>0</item>
-        <item>45</item>
-        <item>35</item>
+        <item>55</item>
+        <item>25</item>
         <item>0</item>
-        <item>35</item>
+        <item>25</item>
     </array>
     <array name="ufo_target_left_upper_rect">
         <item>"Rect"</item>
@@ -232,66 +229,50 @@
     <array name="ufo_target_antenna">
         <item>"Rect"</item>
         <item>"Target"</item>
-        <item>185</item>
-        <item>100</item>
-        <item>196</item>
+        <item>195</item>
+        <item>60</item>
+        <item>205</item>
         <item>118</item>
     </array>
     <array name="ufo_target_left_upper_circle">
         <item>"Oval"</item>
         <item>"Target"</item>
-        <item>350</item>
         <item>170</item>
-        <item>375</item>
-        <item>3</item>
+        <item>153</item>
+        <item>195</item>
+        <item>178</item>
     </array>
-    <array name="ufo_target_left_lower_circle">
+    <array name="ufo_target_center_circle">
         <item>"Oval"</item>
         <item>"Target"</item>
-        <item>350</item>
-        <item>170</item>
-        <item>375</item>
-        <item>3</item>
-    </array>
-    <array name="ufo_target_right_upper_circle">
-        <item>"Oval"</item>
-        <item>"Target"</item>
-        <item>350</item>
-        <item>170</item>
-        <item>375</item>
-        <item>3</item>
-    </array>
-    <array name="ufo_target_right_lower_circle">
-        <item>"Oval"</item>
-        <item>"Target"</item>
-        <item>350</item>
-        <item>170</item>
-        <item>375</item>
-        <item>3</item>
+        <item>178</item>
+        <item>155</item>
+        <item>218</item>
+        <item>195</item>
     </array>
     <array name="ufo_target_left_circle">
         <item>"Oval"</item>
         <item>"Target"</item>
-        <item>20</item>
-        <item>170</item>
+        <item>5</item>
+        <item>163</item>
         <item>45</item>
-        <item>195</item>
+        <item>203</item>
     </array>
     <array name="ufo_target_right_circle">
         <item>"Oval"</item>
         <item>"Target"</item>
-        <item>355</item>
-        <item>170</item>
-        <item>380</item>
-        <item>195</item>
+        <item>350</item>
+        <item>163</item>
+        <item>390</item>
+        <item>203</item>
     </array>
     <array name="ufo_target_top_circle">
         <item>"Oval"</item>
         <item>"Target"</item>
-        <item>188</item>
-        <item>70</item>
-        <item>213</item>
-        <item>95</item>
+        <item>182</item>
+        <item>15</item>
+        <item>222</item>
+        <item>55</item>
     </array>
     <array name="ufo_spawn_wheel">
         <item>"Oval"</item>
