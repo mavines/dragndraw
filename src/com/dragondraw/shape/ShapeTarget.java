@@ -7,14 +7,15 @@ import android.graphics.Paint;
 import android.graphics.Paint.Style;
 import android.graphics.Rect;
 import android.graphics.drawable.ShapeDrawable;
+import android.graphics.drawable.shapes.PathShape;
 import android.graphics.drawable.shapes.Shape;
 
-public class ShapeTarget extends ShapeDrawable {
+public class ShapeTarget extends DefaultComparableShape {
 	private static final int SNAP_DISTANCE = 40;
 	private boolean filled;
 
-	public ShapeTarget(Shape shape) {
-		super(shape);
+	public ShapeTarget(String id, Shape shape) {
+		super(id, shape);
 		filled = false;
 	}
 
@@ -51,15 +52,6 @@ public class ShapeTarget extends ShapeDrawable {
 				+ Math.pow(shapeBounds.top - targetBounds.top, 2));
 
 		return distance <= SNAP_DISTANCE;
-	}
-
-	public boolean matchesTarget(MovableShape shape) {
-		Rect shapeBounds = shape.getBounds();
-		Rect targetBounds = this.getBounds();
-
-		return shapeBounds.height() == targetBounds.height()
-				&& shapeBounds.width() == targetBounds.width()
-				&& shape.getShape().getClass() == this.getShape().getClass();
 	}
 
 	private void setUnfilledPaint() {

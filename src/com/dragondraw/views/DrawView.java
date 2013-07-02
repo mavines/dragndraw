@@ -193,7 +193,7 @@ public class DrawView extends View {
 			// See if we hit the target and see if we match the
 			// shape of the target.
 			if (target.hitTarget(activeShape)
-					&& target.matchesTarget(activeShape)) {
+					&& target.equals(activeShape)) {
 
 				// Snap the shape to the target and mark the target
 				// as filled and play a sound.

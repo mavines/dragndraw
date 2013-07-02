@@ -26,6 +26,7 @@ public class ShapeFactory {
 
 	public ShapeDrawable createShape(TypedArray shapeArray) {
 		String shapeTypeString = shapeArray.getString(1);
+		String shapeId = shapeArray.getString(2);
 
 		Shape shape = getShape(shapeArray);
 
@@ -34,23 +35,23 @@ public class ShapeFactory {
 		int defaultColor = context.getResources().getColor(R.color.brown);
 
 		if (shapeTypeString.equals("Target")) {
-			resultingShape = new ShapeTarget(shape);
+			resultingShape = new ShapeTarget(shapeId, shape);
 		} else if (shapeTypeString.equals("Spawn")) {
-			resultingShape = new ShapeSpawn(shape);
+			resultingShape = new ShapeSpawn(shapeId, shape);
 			resultingShape.getPaint().setColor(defaultColor);
 		} else if (shapeTypeString.equals("Color")) {
-			int color = Color.parseColor(shapeArray.getString(6));
-			resultingShape = new ShapeSpawn(shape);
+			int color = Color.parseColor(shapeArray.getString(7));
+			resultingShape = new ShapeSpawn(shapeId, shape);
 			resultingShape.getPaint().setColor(color);
 		} else {
 			assert false : "Should never get here";
 			resultingShape = null;
 		}
 
-		int left = shapeArray.getInt(2, 0);
-		int top = shapeArray.getInt(3, 0);
-		int right = shapeArray.getInt(4, 0);
-		int bottom = shapeArray.getInt(5, 0);
+		int left = shapeArray.getInt(3, 0);
+		int top = shapeArray.getInt(4, 0);
+		int right = shapeArray.getInt(5, 0);
+		int bottom = shapeArray.getInt(6, 0);
 
 		Rect bounds = translator.translateBounds(new Rect(left, top, right,
 				bottom));
@@ -77,17 +78,17 @@ public class ShapeFactory {
 	}
 
 	private Shape buildPathShape(TypedArray shapeArray) {
-		int left = shapeArray.getInt(2, 0);
-		int top = shapeArray.getInt(3, 0);
-		int right = shapeArray.getInt(4, 0);
-		int bottom = shapeArray.getInt(5, 0);
-
+		int left = shapeArray.getInt(3, 0);
+		int top = shapeArray.getInt(4, 0);
+		int right = shapeArray.getInt(5, 0);
+		int bottom = shapeArray.getInt(6, 0);
+		
 		int width = right - left;
 		int height = bottom - top;
-
+		
 		Path shapePath = new Path();
-
-		int pointIndex = 6;
+		
+		int pointIndex = 7;
 		boolean firstPoint = true;
 		while (pointIndex < shapeArray.length()) {
 			int x = shapeArray.getInt(pointIndex, 0);

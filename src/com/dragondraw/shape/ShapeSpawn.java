@@ -8,10 +8,10 @@ import android.graphics.Paint.Style;
 import android.graphics.drawable.ShapeDrawable;
 import android.graphics.drawable.shapes.Shape;
 
-public class ShapeSpawn extends ShapeDrawable {
+public class ShapeSpawn extends DefaultComparableShape {
 	
-	public ShapeSpawn(Shape shape) {
-		super(shape);
+	public ShapeSpawn(String id, Shape shape) {
+		super(id, shape);
 	}
 
 	
@@ -27,7 +27,7 @@ public class ShapeSpawn extends ShapeDrawable {
 
 	public MovableShape spawnShape()
 	{
-		MovableShape movableShape = new MovableShape(this.getShape());
+		MovableShape movableShape = new MovableShape(this.getId(), this.getShape());
 		movableShape.setBounds(this.getBounds());
 		movableShape.getPaint().setColor(this.getPaint().getColor());
 		
