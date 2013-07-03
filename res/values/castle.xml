@@ -1,0 +1,315 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <array name="castle" type="id">
+        <item>@array/castle_target_back_wheel1</item>
+        <item>@array/castle_target_back_wheel2</item>
+        <item>@array/castle_target_middle_wheel1</item>
+        <item>@array/castle_target_middle_wheel2</item>
+        <item>@array/castle_target_front_wheel1</item>
+        <item>@array/castle_target_front_wheel2</item>
+        <item>@array/castle_target_front_wheel3</item>
+        <item>@array/castle_target_back_body</item>
+        <item>@array/castle_target_back_floor</item>
+        <item>@array/castle_target_back_roof</item>
+        <item>@array/castle_target_middle_floor</item>
+        <item>@array/castle_target_middle_body</item>
+        <item>@array/castle_target_front_floor</item>
+        <item>@array/castle_target_front_body</item>
+        <item>@array/castle_target_front_upright</item>
+        <item>@array/castle_target_front_top</item>
+        <item>@array/castle_spawn_body</item>
+        <item>@array/castle_spawn_floor</item>
+        <item>@array/castle_spawn_front_floor</item>
+        <item>@array/castle_spawn_front_roof</item>
+        <item>@array/castle_spawn_upright</item>
+        <item>@array/castle_spawn_wheel</item>
+        <item>@array/castle_color_blue</item>
+        <item>@array/castle_color_red</item>
+        <item>@array/castle_color_green</item>
+        <item>@array/castle_color_yellow</item>
+        <item>@array/castle_color_orange</item>
+        <item>@array/castle_color_pink</item>
+        <item>@array/castle_color_purple</item>
+        <item>@array/castle_color_cyan</item>
+    </array>
+    <array name="castle_target_back_wheel1">
+        <item>"Oval"</item>
+        <item>"Target"</item>
+        <item>"wheel"</item>
+        <item>15</item>
+        <item>257</item>
+        <item>53</item>
+        <item>295</item>
+    </array>
+    <array name="castle_target_back_wheel2">
+        <item>"Oval"</item>
+        <item>"Target"</item>
+        <item>"wheel"</item>
+        <item>75</item>
+        <item>257</item>
+        <item>113</item>
+        <item>295</item>
+    </array>
+    <array name="castle_target_middle_wheel1">
+        <item>"Oval"</item>
+        <item>"Target"</item>
+        <item>"wheel"</item>
+        <item>125</item>
+        <item>257</item>
+        <item>163</item>
+        <item>295</item>
+    </array>
+    <array name="castle_target_middle_wheel2">
+        <item>"Oval"</item>
+        <item>"Target"</item>
+        <item>"wheel"</item>
+        <item>188</item>
+        <item>257</item>
+        <item>226</item>
+        <item>295</item>
+    </array>
+    <array name="castle_target_front_wheel1">
+        <item>"Oval"</item>
+        <item>"Target"</item>
+        <item>"wheel"</item>
+        <item>235</item>
+        <item>257</item>
+        <item>273</item>
+        <item>295</item>
+    </array>
+    <array name="castle_target_front_wheel2">
+        <item>"Oval"</item>
+        <item>"Target"</item>
+        <item>"wheel"</item>
+        <item>278</item>
+        <item>257</item>
+        <item>316</item>
+        <item>295</item>
+    </array>
+    <array name="castle_target_front_wheel3">
+        <item>"Oval"</item>
+        <item>"Target"</item>
+        <item>"wheel"</item>
+        <item>340</item>
+        <item>257</item>
+        <item>378</item>
+        <item>295</item>
+    </array>
+    <array name="castle_target_back_roof">
+        <item>"Rect"</item>
+        <item>"Target"</item>
+        <item>"floor"</item>
+        <item>12</item>
+        <item>134</item>
+        <item>112</item>
+        <item>159</item>
+    </array>
+    <array name="castle_target_back_floor">
+        <item>"Rect"</item>
+        <item>"Target"</item>
+        <item>"floor"</item>
+        <item>12</item>
+        <item>228</item>
+        <item>112</item>
+        <item>253</item>
+    </array>
+    <array name="castle_target_back_body">
+        <item>"Rect"</item>
+        <item>"Target"</item>
+        <item>"body"</item>
+        <item>18</item>
+        <item>164</item>
+        <item>106</item>
+        <item>223</item>
+    </array>
+    <array name="castle_target_middle_floor">
+        <item>"Rect"</item>
+        <item>"Target"</item>
+        <item>"floor"</item>
+        <item>121</item>
+        <item>228</item>
+        <item>221</item>
+        <item>253</item>
+    </array>
+    <array name="castle_target_middle_body">
+        <item>"Rect"</item>
+        <item>"Target"</item>
+        <item>"body"</item>
+        <item>127</item>
+        <item>164</item>
+        <item>215</item>
+        <item>223</item>
+    </array>
+    <array name="castle_target_front_floor">
+        <item>"Rect"</item>
+        <item>"Target"</item>
+        <item>"front_floor"</item>
+        <item>230</item>
+        <item>228</item>
+        <item>373</item>
+        <item>253</item>
+    </array>
+    <array name="castle_target_front_body">
+        <item>"Rect"</item>
+        <item>"Target"</item>
+        <item>"body"</item>
+        <item>282</item>
+        <item>164</item>
+        <item>370</item>
+        <item>223</item>
+    </array>
+    <array name="castle_target_front_upright">
+        <item>"Rect"</item>
+        <item>"Target"</item>
+        <item>"upright"</item>
+        <item>234</item>
+        <item>123</item>
+        <item>278</item>
+        <item>223</item>
+    </array>
+    <array name="castle_target_front_top">
+        <item>"Rect"</item>
+        <item>"Target"</item>
+        <item>"front_roof"</item>
+        <item>225</item>
+        <item>94</item>
+        <item>288</item>
+        <item>119</item>
+    </array>
+    <array name="castle_spawn_floor">
+        <item>"Rect"</item>
+        <item>"Spawn"</item>
+        <item>"floor"</item>
+        <item>78</item>
+        <item>414</item>
+        <item>178</item>
+        <item>439</item>
+    </array>
+    <array name="castle_spawn_body">
+        <item>"Rect"</item>
+        <item>"Spawn"</item>
+        <item>"body"</item>
+        <item>30</item>
+        <item>460</item>
+        <item>118</item>
+        <item>519</item>
+    </array>
+    <array name="castle_spawn_upright">
+        <item>"Rect"</item>
+        <item>"Spawn"</item>
+        <item>"upright"</item>
+        <item>301</item>
+        <item>413</item>
+        <item>345</item>
+        <item>513</item>
+    </array>
+    <array name="castle_spawn_front_roof">
+        <item>"Rect"</item>
+        <item>"Spawn"</item>
+        <item>"front_roof"</item>
+        <item>201</item>
+        <item>414</item>
+        <item>264</item>
+        <item>439</item>
+    </array>
+    <array name="castle_spawn_front_floor">
+        <item>"Rect"</item>
+        <item>"Spawn"</item>
+        <item>"front_floor"</item>
+        <item>138</item>
+        <item>478</item>
+        <item>281</item>
+        <item>503</item>
+    </array>
+    <array name="castle_spawn_wheel">
+        <item>"Oval"</item>
+        <item>"Spawn"</item>
+        <item>"wheel"</item>
+        <item>21</item>
+        <item>408</item>
+        <item>59</item>
+        <item>446</item>
+    </array>
+    <array name="castle_color_red">
+        <item>"Oval"</item>
+        <item>"Color"</item>
+        <item>"Color"</item>
+        <item>0</item>
+        <item>406</item>
+        <item>108</item>
+        <item>486</item>
+        <item>"#db2929"</item>
+    </array>
+    <array name="castle_color_green">
+        <item>"Oval"</item>
+        <item>"Color"</item>
+        <item>"Color"</item>
+                <item>132</item>
+        <item>406</item>
+        <item>254</item>
+        <item>486</item>
+        <item>"#32a232"</item>
+    </array>
+    <array name="castle_color_blue">
+        <item>"Oval"</item>
+        <item>"Color"</item>
+        <item>"Color"</item>
+        <item>270</item>
+        <item>406</item>
+        <item>387</item>
+        <item>486</item>
+        <item>"#3d54ff"</item>
+    </array>
+    <array name="castle_color_orange">
+        <item>"Oval"</item>
+        <item>"Color"</item>
+        <item>"Color"</item>
+        <item>0</item>
+        <item>498</item>
+        <item>114</item>
+        <item>569</item>
+        <item>"#e0711f"</item>
+    </array>
+    <array name="castle_color_yellow">
+        <item>"Oval"</item>
+        <item>"Color"</item>
+        <item>"Color"</item>
+        <item>120</item>
+        <item>498</item>
+        <item>243</item>
+        <item>569</item>
+        <item>"#f9f618"</item>
+    </array>
+    <array name="castle_color_pink">
+        <item>"Oval"</item>
+        <item>"Color"</item>
+        <item>"Color"</item>
+        <item>250</item>
+        <item>498</item>
+        <item>370</item>
+        <item>569</item>
+        <item>"#f6289c"</item>
+    </array>
+    <array name="castle_color_purple">
+        <item>"Oval"</item>
+        <item>"Color"</item>
+        <item>"Color"</item>
+        <item>8</item>
+        <item>593</item>
+        <item>114</item>
+        <item>672</item>
+        <item>"#8f21d5"</item>
+    </array>
+    <array name="castle_color_cyan">
+        <item>"Oval"</item>
+        <item>"Color"</item>
+        <item>"Color"</item>
+        <item>127</item>
+        <item>593</item>
+        <item>244</item>
+        <item>672</item>
+        <item>"#15bca6"</item>
+    </array>
+
+</resources>

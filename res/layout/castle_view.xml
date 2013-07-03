@@ -1,0 +1,26 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:drawview="http://schemas.android.com/apk/res/com.dragondraw"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <com.dragondraw.views.DrawView
+        android:id="@+id/drawview"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:padding="@dimen/padding_medium"
+        drawview:background_image="@drawable/castle_background"
+        drawview:background_paint_image="@drawable/castle_background_paint"
+        drawview:level_id="@array/castle" />
+
+    <Button
+        android:id="@+id/back_button"
+        android:layout_width="96dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:background="@drawable/back_button"  />
+
+</RelativeLayout>
