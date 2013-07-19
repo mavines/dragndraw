@@ -33,12 +33,11 @@
         <item>@array/castle_target_right_battlement_tower</item>
 
         <!-- Spawns -->
-        <item>@array/castle_spawn_body</item>
-        <item>@array/castle_spawn_floor</item>
-        <item>@array/castle_spawn_front_floor</item>
-        <item>@array/castle_spawn_front_roof</item>
-        <item>@array/castle_spawn_upright</item>
-        <item>@array/castle_spawn_wheel</item>
+        <item>@array/castle_spawn_merlon</item>
+        <item>@array/castle_spawn_upper_right_triangle</item>
+        <item>@array/castle_spawn_upper_left_triangle</item>
+        <item>@array/castle_spawn_tower</item>
+        <item>@array/castle_spawn_wall</item>
 
         <!-- Colors -->
         <item>@array/castle_color_blue</item>
@@ -301,59 +300,62 @@
     </array>
 
     <!-- Spawns -->
-    <array name="castle_spawn_floor">
+    <array name="castle_spawn_merlon">
         <item>"Rect"</item>
         <item>"Spawn"</item>
-        <item>"floor"</item>
-        <item>78</item>
-        <item>414</item>
-        <item>178</item>
-        <item>439</item>
+        <item>"merlon"</item>
+        <item>50</item>
+        <item>425</item>
+        <item>75</item>
+        <item>450</item>
     </array>
-    <array name="castle_spawn_body">
+    <array name="castle_spawn_upper_right_triangle">
+        <item>"Path"</item>
+        <item>"Spawn"</item>
+        <item>"upper_right_triangle"</item>
+        <item>90</item>
+        <item>425</item>
+        <item>115</item>
+        <item>450</item>
+         <item>0</item>
+        <item>0</item>
+        <item>35</item>
+        <item>0</item>
+        <item>35</item>
+        <item>25</item>
+    </array>
+    <array name="castle_spawn_upper_left_triangle">
+        <item>"Path"</item>
+        <item>"Spawn"</item>
+        <item>"upper_left_triangle"</item>
+        <item>160</item>
+        <item>425</item>
+        <item>195</item>
+        <item>450</item>
+        <item>0</item>
+        <item>0</item>
+        <item>35</item>
+        <item>0</item>
+        <item>0</item>
+        <item>25</item>
+    </array>
+    <array name="castle_spawn_tower">
         <item>"Rect"</item>
         <item>"Spawn"</item>
-        <item>"body"</item>
-        <item>30</item>
-        <item>460</item>
-        <item>118</item>
-        <item>519</item>
+        <item>"tower"</item>
+        <item>230</item>
+        <item>425</item>
+        <item>305</item>
+        <item>600</item>
     </array>
-    <array name="castle_spawn_upright">
+    <array name="castle_spawn_wall">
         <item>"Rect"</item>
         <item>"Spawn"</item>
-        <item>"upright"</item>
-        <item>301</item>
-        <item>413</item>
-        <item>345</item>
-        <item>513</item>
-    </array>
-    <array name="castle_spawn_front_roof">
-        <item>"Rect"</item>
-        <item>"Spawn"</item>
-        <item>"front_roof"</item>
-        <item>201</item>
-        <item>414</item>
-        <item>264</item>
-        <item>439</item>
-    </array>
-    <array name="castle_spawn_front_floor">
-        <item>"Rect"</item>
-        <item>"Spawn"</item>
-        <item>"front_floor"</item>
-        <item>138</item>
-        <item>478</item>
-        <item>281</item>
-        <item>503</item>
-    </array>
-    <array name="castle_spawn_wheel">
-        <item>"Oval"</item>
-        <item>"Spawn"</item>
-        <item>"wheel"</item>
-        <item>21</item>
-        <item>408</item>
-        <item>59</item>
-        <item>446</item>
+        <item>"wall"</item>
+        <item>90</item>
+        <item>490</item>
+        <item>140</item>
+        <item>615</item>
     </array>
     <array name="castle_color_red">
         <item>"Oval"</item>
