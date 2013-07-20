@@ -80,7 +80,7 @@ public class DrawView extends View {
 			int shapeId = levelResources.getResourceId(resourceIndex, 0);
 			TypedArray shapeArray = resources.obtainTypedArray(shapeId);
 			String shapeString = shapeArray.getString(1);
-
+			
 			ShapeDrawable createdShape = shapeFactory.createShape(shapeArray);
 
 			// Put the created shape into the corresponding list.
@@ -239,7 +239,7 @@ public class DrawView extends View {
 			this.height = h;
 			PixelTranslator translator = new PixelTranslator(width, height);
 
-			shapeFactory = new ShapeFactory(super.getContext(), translator);
+			shapeFactory = new ShapeFactory(translator);
 			loadLevel(levelId);
 		}
 	}

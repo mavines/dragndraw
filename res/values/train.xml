@@ -36,6 +36,7 @@
     <array name="train_target_back_wheel1">
         <item>"Oval"</item>
         <item>"Target"</item>
+        <item>@color/black</item>
         <item>"wheel"</item>
         <item>15</item>
         <item>257</item>
@@ -45,6 +46,7 @@
     <array name="train_target_back_wheel2">
         <item>"Oval"</item>
         <item>"Target"</item>
+        <item>@color/black</item>
         <item>"wheel"</item>
         <item>75</item>
         <item>257</item>
@@ -54,6 +56,7 @@
     <array name="train_target_middle_wheel1">
         <item>"Oval"</item>
         <item>"Target"</item>
+        <item>@color/black</item>
         <item>"wheel"</item>
         <item>125</item>
         <item>257</item>
@@ -63,6 +66,7 @@
     <array name="train_target_middle_wheel2">
         <item>"Oval"</item>
         <item>"Target"</item>
+        <item>@color/black</item>
         <item>"wheel"</item>
         <item>188</item>
         <item>257</item>
@@ -72,6 +76,7 @@
     <array name="train_target_front_wheel1">
         <item>"Oval"</item>
         <item>"Target"</item>
+        <item>@color/black</item>
         <item>"wheel"</item>
         <item>235</item>
         <item>257</item>
@@ -81,6 +86,7 @@
     <array name="train_target_front_wheel2">
         <item>"Oval"</item>
         <item>"Target"</item>
+        <item>@color/black</item>
         <item>"wheel"</item>
         <item>278</item>
         <item>257</item>
@@ -90,6 +96,7 @@
     <array name="train_target_front_wheel3">
         <item>"Oval"</item>
         <item>"Target"</item>
+        <item>@color/black</item>
         <item>"wheel"</item>
         <item>340</item>
         <item>257</item>
@@ -99,6 +106,7 @@
     <array name="train_target_back_roof">
         <item>"Rect"</item>
         <item>"Target"</item>
+        <item>@color/black</item>
         <item>"floor"</item>
         <item>12</item>
         <item>134</item>
@@ -108,6 +116,7 @@
     <array name="train_target_back_floor">
         <item>"Rect"</item>
         <item>"Target"</item>
+        <item>@color/black</item>
         <item>"floor"</item>
         <item>12</item>
         <item>228</item>
@@ -117,6 +126,7 @@
     <array name="train_target_back_body">
         <item>"Rect"</item>
         <item>"Target"</item>
+        <item>@color/black</item>
         <item>"body"</item>
         <item>18</item>
         <item>164</item>
@@ -126,6 +136,7 @@
     <array name="train_target_middle_floor">
         <item>"Rect"</item>
         <item>"Target"</item>
+        <item>@color/black</item>
         <item>"floor"</item>
         <item>121</item>
         <item>228</item>
@@ -135,6 +146,7 @@
     <array name="train_target_middle_body">
         <item>"Rect"</item>
         <item>"Target"</item>
+        <item>@color/black</item>
         <item>"body"</item>
         <item>127</item>
         <item>164</item>
@@ -144,6 +156,7 @@
     <array name="train_target_front_floor">
         <item>"Rect"</item>
         <item>"Target"</item>
+        <item>@color/black</item>
         <item>"front_floor"</item>
         <item>230</item>
         <item>228</item>
@@ -153,6 +166,7 @@
     <array name="train_target_front_body">
         <item>"Rect"</item>
         <item>"Target"</item>
+        <item>@color/black</item>
         <item>"body"</item>
         <item>282</item>
         <item>164</item>
@@ -162,6 +176,7 @@
     <array name="train_target_front_upright">
         <item>"Rect"</item>
         <item>"Target"</item>
+        <item>@color/black</item>
         <item>"upright"</item>
         <item>234</item>
         <item>123</item>
@@ -171,6 +186,7 @@
     <array name="train_target_front_top">
         <item>"Rect"</item>
         <item>"Target"</item>
+        <item>@color/black</item>
         <item>"front_roof"</item>
         <item>225</item>
         <item>94</item>
@@ -180,6 +196,7 @@
     <array name="train_spawn_floor">
         <item>"Rect"</item>
         <item>"Spawn"</item>
+        <item>@color/brown</item>
         <item>"floor"</item>
         <item>78</item>
         <item>414</item>
@@ -189,6 +206,7 @@
     <array name="train_spawn_body">
         <item>"Rect"</item>
         <item>"Spawn"</item>
+        <item>@color/brown</item>
         <item>"body"</item>
         <item>30</item>
         <item>460</item>
@@ -198,6 +216,7 @@
     <array name="train_spawn_upright">
         <item>"Rect"</item>
         <item>"Spawn"</item>
+        <item>@color/brown</item>
         <item>"upright"</item>
         <item>301</item>
         <item>413</item>
@@ -207,6 +226,7 @@
     <array name="train_spawn_front_roof">
         <item>"Rect"</item>
         <item>"Spawn"</item>
+        <item>@color/brown</item>
         <item>"front_roof"</item>
         <item>201</item>
         <item>414</item>
@@ -216,6 +236,7 @@
     <array name="train_spawn_front_floor">
         <item>"Rect"</item>
         <item>"Spawn"</item>
+        <item>@color/brown</item>
         <item>"front_floor"</item>
         <item>138</item>
         <item>478</item>
@@ -225,6 +246,7 @@
     <array name="train_spawn_wheel">
         <item>"Oval"</item>
         <item>"Spawn"</item>
+        <item>@color/brown</item>
         <item>"wheel"</item>
         <item>21</item>
         <item>408</item>
@@ -234,6 +256,7 @@
     <array name="train_color_red">
         <item>"Oval"</item>
         <item>"Color"</item>
+        <item>@color/brown</item>
         <item>"Color"</item>
         <item>0</item>
         <item>406</item>
@@ -244,8 +267,9 @@
     <array name="train_color_green">
         <item>"Oval"</item>
         <item>"Color"</item>
+        <item>@color/brown</item>
         <item>"Color"</item>
-                <item>132</item>
+        <item>132</item>
         <item>406</item>
         <item>254</item>
         <item>486</item>
@@ -254,6 +278,7 @@
     <array name="train_color_blue">
         <item>"Oval"</item>
         <item>"Color"</item>
+        <item>@color/brown</item>
         <item>"Color"</item>
         <item>270</item>
         <item>406</item>
@@ -264,6 +289,7 @@
     <array name="train_color_orange">
         <item>"Oval"</item>
         <item>"Color"</item>
+        <item>@color/brown</item>
         <item>"Color"</item>
         <item>0</item>
         <item>498</item>
@@ -274,6 +300,7 @@
     <array name="train_color_yellow">
         <item>"Oval"</item>
         <item>"Color"</item>
+        <item>@color/brown</item>
         <item>"Color"</item>
         <item>120</item>
         <item>498</item>
@@ -284,6 +311,7 @@
     <array name="train_color_pink">
         <item>"Oval"</item>
         <item>"Color"</item>
+        <item>@color/brown</item>
         <item>"Color"</item>
         <item>250</item>
         <item>498</item>
@@ -294,6 +322,7 @@
     <array name="train_color_purple">
         <item>"Oval"</item>
         <item>"Color"</item>
+        <item>@color/brown</item>
         <item>"Color"</item>
         <item>8</item>
         <item>593</item>
@@ -304,6 +333,7 @@
     <array name="train_color_cyan">
         <item>"Oval"</item>
         <item>"Color"</item>
+        <item>@color/brown</item>
         <item>"Color"</item>
         <item>127</item>
         <item>593</item>

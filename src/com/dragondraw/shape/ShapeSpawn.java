@@ -5,7 +5,6 @@ import android.graphics.Canvas;
 import android.graphics.Color;
 import android.graphics.Paint;
 import android.graphics.Paint.Style;
-import android.graphics.drawable.ShapeDrawable;
 import android.graphics.drawable.shapes.Shape;
 
 public class ShapeSpawn extends DefaultComparableShape {

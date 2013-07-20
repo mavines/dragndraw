@@ -2,7 +2,6 @@ package com.dragondraw.shape;
 
 
 import android.graphics.Rect;
-import android.graphics.drawable.ShapeDrawable;
 import android.graphics.drawable.shapes.Shape;
 
 public class MovableShape extends DefaultComparableShape{

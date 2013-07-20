@@ -30,6 +30,7 @@
     <array name="truck_target_back_wheel1">
         <item>"Oval"</item>
         <item>"Target"</item>
+        <item>@color/black</item>
         <item>"wheel"</item>
         <item>8</item>
         <item>310</item>
@@ -39,6 +40,7 @@
     <array name="truck_target_back_wheel2">
         <item>"Oval"</item>
         <item>"Target"</item>
+        <item>@color/black</item>
         <item>"wheel"</item>
         <item>53</item>
         <item>310</item>
@@ -48,6 +50,7 @@
     <array name="truck_target_mid_wheel1">
         <item>"Oval"</item>
         <item>"Target"</item>
+        <item>@color/black</item>
         <item>"wheel"</item>
         <item>185</item>
         <item>310</item>
@@ -57,6 +60,7 @@
     <array name="truck_target_mid_wheel2">
         <item>"Oval"</item>
         <item>"Target"</item>
+        <item>@color/black</item>
         <item>"wheel"</item>
         <item>250</item>
         <item>310</item>
@@ -66,6 +70,7 @@
     <array name="truck_target_front_wheel">
         <item>"Oval"</item>
         <item>"Target"</item>
+        <item>@color/black</item>
         <item>"wheel"</item>
         <item>340</item>
         <item>310</item>
@@ -75,6 +80,7 @@
     <array name="truck_target_bottom">
         <item>"Rect"</item>
         <item>"Target"</item>
+        <item>@color/black</item>
         <item>"bottom"</item>
         <item>5</item>
         <item>290</item>
@@ -84,6 +90,7 @@
     <array name="truck_target_trailer">
         <item>"Rect"</item>
         <item>"Target"</item>
+        <item>@color/black</item>
         <item>"trailer"</item>
         <item>5</item>
         <item>185</item>
@@ -93,6 +100,7 @@
     <array name="truck_target_cab">
         <item>"Rect"</item>
         <item>"Target"</item>
+        <item>@color/black</item>
         <item>"cab"</item>
         <item>240</item>
         <item>215</item>
@@ -102,6 +110,7 @@
     <array name="truck_target_front">
         <item>"Rect"</item>
         <item>"Target"</item>
+        <item>@color/black</item>
         <item>"front"</item>
         <item>290</item>
         <item>235</item>
@@ -111,6 +120,7 @@
     <array name="truck_target_triangle">
         <item>"Path"</item>
         <item>"Target"</item>
+        <item>@color/black</item>
         <item>"triangle"</item>
         <item>240</item>
         <item>175</item>
@@ -126,6 +136,7 @@
     <array name="truck_spawn_wheel">
         <item>"Oval"</item>
         <item>"Spawn"</item>
+        <item>@color/brown</item>
         <item>"wheel"</item>
         <item>20</item>
         <item>435</item>
@@ -135,6 +146,7 @@
     <array name="truck_spawn_bottom">
         <item>"Rect"</item>
         <item>"Spawn"</item>
+        <item>@color/brown</item>
         <item>"bottom"</item>
         <item>15</item>
         <item>525</item>
@@ -144,6 +156,7 @@
     <array name="truck_spawn_trailer">
         <item>"Rect"</item>
         <item>"Spawn"</item>
+        <item>@color/brown</item>
         <item>"trailer"</item>
         <item>80</item>
         <item>415</item>
@@ -153,6 +166,7 @@
     <array name="truck_spawn_front">
         <item>"Rect"</item>
         <item>"Spawn"</item>
+        <item>@color/brown</item>
         <item>"front"</item>
         <item>110</item>
         <item>555</item>
@@ -162,6 +176,7 @@
     <array name="truck_spawn_triangle">
         <item>"Path"</item>
         <item>"Spawn"</item>
+        <item>@color/brown</item>
         <item>"triangle"</item>
         <item>210</item>
         <item>550</item>
@@ -177,6 +192,7 @@
     <array name="truck_spawn_cab">
         <item>"Rect"</item>
         <item>"Spawn"</item>
+        <item>@color/brown</item>
         <item>"cab"</item>
         <item>20</item>
         <item>550</item>
@@ -186,6 +202,7 @@
     <array name="truck_color_red">
         <item>"Oval"</item>
         <item>"Color"</item>
+        <item>@color/brown</item>
         <item>"Color"</item>
         <item>0</item>
         <item>406</item>
@@ -196,6 +213,7 @@
     <array name="truck_color_green">
         <item>"Oval"</item>
         <item>"Color"</item>
+        <item>@color/brown</item>
         <item>"Color"</item>
         <item>132</item>
         <item>406</item>
@@ -206,6 +224,7 @@
     <array name="truck_color_blue">
         <item>"Oval"</item>
         <item>"Color"</item>
+        <item>@color/brown</item>
         <item>"Color"</item>
         <item>270</item>
         <item>406</item>
@@ -216,6 +235,7 @@
     <array name="truck_color_orange">
         <item>"Oval"</item>
         <item>"Color"</item>
+        <item>@color/brown</item>
         <item>"Color"</item>
         <item>0</item>
         <item>498</item>
@@ -226,6 +246,7 @@
     <array name="truck_color_yellow">
         <item>"Oval"</item>
         <item>"Color"</item>
+        <item>@color/brown</item>
         <item>"Color"</item>
         <item>120</item>
         <item>498</item>
@@ -236,6 +257,7 @@
     <array name="truck_color_pink">
         <item>"Oval"</item>
         <item>"Color"</item>
+        <item>@color/brown</item>
         <item>"Color"</item>
         <item>250</item>
         <item>498</item>
@@ -246,6 +268,7 @@
     <array name="truck_color_purple">
         <item>"Oval"</item>
         <item>"Color"</item>
+        <item>@color/brown</item>
         <item>"Color"</item>
         <item>8</item>
         <item>593</item>
@@ -256,6 +279,7 @@
     <array name="truck_color_cyan">
         <item>"Oval"</item>
         <item>"Color"</item>
+        <item>@color/brown</item>
         <item>"Color"</item>
         <item>127</item>
         <item>593</item>

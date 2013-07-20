@@ -6,18 +6,18 @@ import android.graphics.DashPathEffect;
 import android.graphics.Paint;
 import android.graphics.Paint.Style;
 import android.graphics.Rect;
-import android.graphics.drawable.ShapeDrawable;
-import android.graphics.drawable.shapes.PathShape;
 import android.graphics.drawable.shapes.Shape;
 
 public class ShapeTarget extends DefaultComparableShape {
 	private static final int SNAP_DISTANCE = 40;
 	private boolean filled;
-
-	public ShapeTarget(String id, Shape shape) {
+	private int unfilledColor;
+	
+	public ShapeTarget(String id, Shape shape, int unfilledColor) {
 		super(id, shape);
-		filled = false;
+		this.unfilledColor = unfilledColor;
 	}
+
 
 	@Override
 	public void draw(Canvas canvas) {
@@ -58,7 +58,7 @@ public class ShapeTarget extends DefaultComparableShape {
 		Paint unfilledPaint = this.getPaint();
 
 		unfilledPaint.setStyle(Style.STROKE);
-		unfilledPaint.setColor(Color.RED);
+		unfilledPaint.setColor(unfilledColor);
 		unfilledPaint.setStrokeWidth(3);
 		unfilledPaint.setAntiAlias(true);
 		unfilledPaint

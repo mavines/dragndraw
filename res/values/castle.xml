@@ -4,7 +4,7 @@
     <array name="castle" type="id">
 
         <!-- Left Tower -->
-        <item>@array/castle_target_left_battlement_left_merlon</item>        
+        <item>@array/castle_target_left_battlement_left_merlon</item>
         <item>@array/castle_target_left_battlement_right_merlon</item>
         <item>@array/castle_target_left_battlement_tower</item>
 
@@ -42,6 +42,7 @@
     <array name="castle_target_left_battlement_left_merlon">
         <item>"Rect"</item>
         <item>"Target"</item>
+        <item>@color/black</item>
         <item>"merlon"</item>
         <item>5</item>
         <item>40</item>
@@ -51,6 +52,7 @@
     <array name="castle_target_left_battlement_right_merlon">
         <item>"Rect"</item>
         <item>"Target"</item>
+        <item>@color/black</item>
         <item>"merlon"</item>
         <item>70</item>
         <item>40</item>
@@ -60,6 +62,7 @@
     <array name="castle_target_left_battlement_tower">
         <item>"Rect"</item>
         <item>"Target"</item>
+        <item>@color/black</item>
         <item>"tower"</item>
         <item>20</item>
         <item>85</item>
@@ -71,6 +74,7 @@
     <array name="castle_target_center_left_merlon">
         <item>"Rect"</item>
         <item>"Target"</item>
+        <item>@color/black</item>
         <item>"merlon"</item>
         <item>100</item>
         <item>120</item>
@@ -80,15 +84,17 @@
     <array name="castle_target_center_merlon">
         <item>"Rect"</item>
         <item>"Target"</item>
+        <item>@color/black</item>
         <item>"merlon"</item>
         <item>165</item>
         <item>120</item>
         <item>205</item>
         <item>160</item>
-    </array> 
+    </array>
     <array name="castle_target_center_right_merlon">
         <item>"Rect"</item>
         <item>"Target"</item>
+        <item>@color/black</item>
         <item>"merlon"</item>
         <item>230</item>
         <item>120</item>
@@ -98,15 +104,17 @@
     <array name="castle_target_center_left_wall">
         <item>"Rect"</item>
         <item>"Target"</item>
+        <item>@color/black</item>
         <item>"wall"</item>
         <item>100</item>
         <item>165</item>
         <item>150</item>
         <item>290</item>
     </array>
-        <array name="castle_target_center_archway">
+    <array name="castle_target_center_archway">
         <item>"Rect"</item>
         <item>"Target"</item>
+        <item>@color/black</item>
         <item>"arch"</item>
         <item>155</item>
         <item>165</item>
@@ -116,17 +124,19 @@
     <array name="castle_target_center_right_wall">
         <item>"Rect"</item>
         <item>"Target"</item>
+        <item>@color/black</item>
         <item>"wall"</item>
         <item>220</item>
         <item>165</item>
         <item>270</item>
         <item>290</item>
     </array>
-   
+
     <!-- Right Tower Targets -->
     <array name="castle_target_right_battlement_left_merlon">
         <item>"Rect"</item>
         <item>"Target"</item>
+        <item>@color/black</item>
         <item>"merlon"</item>
         <item>260</item>
         <item>40</item>
@@ -136,6 +146,7 @@
     <array name="castle_target_right_battlement_right_merlon">
         <item>"Rect"</item>
         <item>"Target"</item>
+        <item>@color/black</item>
         <item>"merlon"</item>
         <item>325</item>
         <item>40</item>
@@ -145,6 +156,7 @@
     <array name="castle_target_right_battlement_tower">
         <item>"Rect"</item>
         <item>"Target"</item>
+        <item>@color/black</item>
         <item>"tower"</item>
         <item>275</item>
         <item>85</item>
@@ -156,6 +168,7 @@
     <array name="castle_spawn_merlon">
         <item>"Rect"</item>
         <item>"Spawn"</item>
+        <item>@color/brown</item>
         <item>"merlon"</item>
         <item>40</item>
         <item>425</item>
@@ -165,6 +178,7 @@
     <array name="castle_spawn_tower">
         <item>"Rect"</item>
         <item>"Spawn"</item>
+        <item>@color/brown</item>
         <item>"tower"</item>
         <item>200</item>
         <item>425</item>
@@ -174,15 +188,17 @@
     <array name="castle_spawn_wall">
         <item>"Rect"</item>
         <item>"Spawn"</item>
+        <item>@color/brown</item>
         <item>"wall"</item>
         <item>90</item>
         <item>490</item>
         <item>140</item>
         <item>615</item>
     </array>
-        <array name="castle_spawn_arch">
+    <array name="castle_spawn_arch">
         <item>"Rect"</item>
         <item>"Spawn"</item>
+        <item>@color/brown</item>
         <item>"arch"</item>
         <item>300</item>
         <item>425</item>
@@ -192,6 +208,7 @@
     <array name="castle_color_red">
         <item>"Oval"</item>
         <item>"Color"</item>
+        <item>@color/black</item>
         <item>"Color"</item>
         <item>0</item>
         <item>406</item>
@@ -202,6 +219,7 @@
     <array name="castle_color_green">
         <item>"Oval"</item>
         <item>"Color"</item>
+        <item>@color/black</item>
         <item>"Color"</item>
         <item>132</item>
         <item>406</item>
@@ -212,6 +230,7 @@
     <array name="castle_color_blue">
         <item>"Oval"</item>
         <item>"Color"</item>
+        <item>@color/black</item>
         <item>"Color"</item>
         <item>270</item>
         <item>406</item>
@@ -222,6 +241,7 @@
     <array name="castle_color_orange">
         <item>"Oval"</item>
         <item>"Color"</item>
+        <item>@color/black</item>
         <item>"Color"</item>
         <item>0</item>
         <item>498</item>
@@ -232,6 +252,7 @@
     <array name="castle_color_yellow">
         <item>"Oval"</item>
         <item>"Color"</item>
+        <item>@color/black</item>
         <item>"Color"</item>
         <item>120</item>
         <item>498</item>
@@ -242,6 +263,7 @@
     <array name="castle_color_pink">
         <item>"Oval"</item>
         <item>"Color"</item>
+        <item>@color/black</item>
         <item>"Color"</item>
         <item>250</item>
         <item>498</item>
@@ -252,6 +274,7 @@
     <array name="castle_color_purple">
         <item>"Oval"</item>
         <item>"Color"</item>
+        <item>@color/black</item>
         <item>"Color"</item>
         <item>8</item>
         <item>593</item>
@@ -262,6 +285,7 @@
     <array name="castle_color_cyan">
         <item>"Oval"</item>
         <item>"Color"</item>
+        <item>@color/black</item>
         <item>"Color"</item>
         <item>127</item>
         <item>593</item>
