@@ -1,6 +1,7 @@
 package com.dragondraw;
 
 import android.app.Activity;
+import android.media.AudioManager;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -10,7 +11,7 @@ public class DragonDraw extends Activity {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        
+        setVolumeControlStream(AudioManager.STREAM_MUSIC);
         Bundle extras = getIntent().getExtras();
         if (extras != null) {
             int levelId = (int)extras.getLong(PICTURE_KEY);

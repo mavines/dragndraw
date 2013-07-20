@@ -141,36 +141,36 @@
         <item>"Target"</item>
         <item>"circle"</item>
         <item>5</item>
-        <item>165</item>
+        <item>163</item>
         <item>45</item>
-        <item>205</item>
+        <item>203</item>
     </array>
     <array name="ufo_target_right_circle">
         <item>"Oval"</item>
         <item>"Target"</item>
         <item>"circle"</item>
         <item>350</item>
-        <item>165</item>
+        <item>163</item>
         <item>390</item>
-        <item>205</item>
+        <item>203</item>
     </array>
     <array name="ufo_target_top_left_circle">
         <item>"Oval"</item>
         <item>"Target"</item>
         <item>"circle"</item>
         <item>129</item>
-        <item>16</item>
+        <item>14</item>
         <item>169</item>
-        <item>56</item>
+        <item>54</item>
     </array>
     <array name="ufo_target_top_right_circle">
         <item>"Oval"</item>
         <item>"Target"</item>
         <item>"circle"</item>
         <item>234</item>
-        <item>16</item>
+        <item>14</item>
         <item>274</item>
-        <item>56</item>
+        <item>54</item>
     </array>
     <array name="ufo_spawn_top_left_triangle">
         <item>"Path"</item>
