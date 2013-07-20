@@ -13,7 +13,8 @@
         android:padding="@dimen/padding_medium"
         drawview:background_image="@drawable/ufo_background"
         drawview:background_paint_image="@drawable/ufo_background_paint"
-        drawview:level_id="@array/ufo" />
+        drawview:level_id="@array/ufo" 
+        drawview:random_sound="@raw/ufo" />
 
     <Button
         android:id="@+id/back_button"

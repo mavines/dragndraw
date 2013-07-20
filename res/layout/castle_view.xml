@@ -13,7 +13,8 @@
         android:padding="@dimen/padding_medium"
         drawview:background_image="@drawable/castle_background"
         drawview:background_paint_image="@drawable/castle_background_paint"
-        drawview:level_id="@array/castle" />
+        drawview:level_id="@array/castle" 
+        drawview:random_sound="@raw/castle_horn"/>
 
     <Button
         android:id="@+id/back_button"

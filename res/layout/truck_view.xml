@@ -13,7 +13,8 @@
         android:padding="@dimen/padding_medium"
         drawview:background_image="@drawable/truck_background"
         drawview:background_paint_image="@drawable/truck_background_paint"
-        drawview:level_id="@array/truck" />
+        drawview:level_id="@array/truck" 
+        drawview:random_sound="@raw/truck_horn" />
 
     <Button
         android:id="@+id/back_button"
