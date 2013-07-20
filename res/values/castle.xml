@@ -4,40 +4,28 @@
     <array name="castle" type="id">
 
         <!-- Left Tower -->
-        <item>@array/castle_target_left_battlement_left_merlon</item>
-        <item>@array/castle_target_left_battlement_middle_merlon</item>
+        <item>@array/castle_target_left_battlement_left_merlon</item>        
         <item>@array/castle_target_left_battlement_right_merlon</item>
-        <item>@array/castle_target_left_battlement_center_square</item>
-        <item>@array/castle_target_left_battlement_left_triangle</item>
-        <item>@array/castle_target_left_battlement_right_triangle</item>
         <item>@array/castle_target_left_battlement_tower</item>
 
         <!-- Middle Section -->
-        <item>@array/castle_target_center_far_left_merlon</item>
         <item>@array/castle_target_center_left_merlon</item>
         <item>@array/castle_target_center_merlon</item>
         <item>@array/castle_target_center_right_merlon</item>
-        <item>@array/castle_target_center_far_right_merlon</item>
         <item>@array/castle_target_center_left_wall</item>
+        <item>@array/castle_target_center_archway</item>
         <item>@array/castle_target_center_right_wall</item>
-        <item>@array/castle_target_center_left_arch</item>
-        <item>@array/castle_target_center_right_arch</item>
 
         <!-- Right Tower -->
         <item>@array/castle_target_right_battlement_left_merlon</item>
-        <item>@array/castle_target_right_battlement_middle_merlon</item>
         <item>@array/castle_target_right_battlement_right_merlon</item>
-        <item>@array/castle_target_right_battlement_center_square</item>
-        <item>@array/castle_target_right_battlement_left_triangle</item>
-        <item>@array/castle_target_right_battlement_right_triangle</item>
         <item>@array/castle_target_right_battlement_tower</item>
 
         <!-- Spawns -->
         <item>@array/castle_spawn_merlon</item>
-        <item>@array/castle_spawn_upper_right_triangle</item>
-        <item>@array/castle_spawn_upper_left_triangle</item>
         <item>@array/castle_spawn_tower</item>
         <item>@array/castle_spawn_wall</item>
+        <item>@array/castle_spawn_arch</item>
 
         <!-- Colors -->
         <item>@array/castle_color_blue</item>
@@ -56,121 +44,55 @@
         <item>"Target"</item>
         <item>"merlon"</item>
         <item>5</item>
-        <item>55</item>
-        <item>30</item>
-        <item>80</item>
-    </array>
-    <array name="castle_target_left_battlement_middle_merlon">
-        <item>"Rect"</item>
-        <item>"Target"</item>
-        <item>"merlon"</item>
+        <item>40</item>
         <item>45</item>
-        <item>55</item>
-        <item>70</item>
         <item>80</item>
     </array>
     <array name="castle_target_left_battlement_right_merlon">
         <item>"Rect"</item>
         <item>"Target"</item>
         <item>"merlon"</item>
-        <item>85</item>
-        <item>55</item>
-        <item>110</item>
-        <item>80</item>
-    </array>
-    <array name="castle_target_left_battlement_center_square">
-        <item>"Rect"</item>
-        <item>"Target"</item>
-        <item>"merlon"</item>
-        <item>45</item>
-        <item>85</item>
         <item>70</item>
-        <item>110</item>
-    </array>
-    <array name="castle_target_left_battlement_left_triangle">
-        <item>"Path"</item>
-        <item>"Target"</item>
-        <item>"upper_right_triangle"</item>
-        <item>5</item>
-        <item>85</item>
         <item>40</item>
         <item>110</item>
-        <item>0</item>
-        <item>0</item>
-        <item>35</item>
-        <item>0</item>
-        <item>35</item>
-        <item>25</item>
-    </array>
-    <array name="castle_target_left_battlement_right_triangle">
-        <item>"Path"</item>
-        <item>"Target"</item>
-        <item>"upper_left_triangle"</item>
-        <item>75</item>
-        <item>85</item>
-        <item>110</item>
-        <item>110</item>
-        <item>0</item>
-        <item>0</item>
-        <item>35</item>
-        <item>0</item>
-        <item>0</item>
-        <item>25</item>
+        <item>80</item>
     </array>
     <array name="castle_target_left_battlement_tower">
         <item>"Rect"</item>
         <item>"Target"</item>
         <item>"tower"</item>
         <item>20</item>
-        <item>115</item>
+        <item>85</item>
         <item>95</item>
         <item>290</item>
     </array>
 
     <!-- Middle Section Targets -->
-    <array name="castle_target_center_far_left_merlon">
-        <item>"Rect"</item>
-        <item>"Target"</item>
-        <item>"merlon"</item>
-        <item>100</item>
-        <item>135</item>
-        <item>125</item>
-        <item>160</item>
-    </array>
     <array name="castle_target_center_left_merlon">
         <item>"Rect"</item>
         <item>"Target"</item>
         <item>"merlon"</item>
+        <item>100</item>
+        <item>120</item>
         <item>140</item>
-        <item>135</item>
-        <item>165</item>
         <item>160</item>
     </array>
     <array name="castle_target_center_merlon">
         <item>"Rect"</item>
         <item>"Target"</item>
         <item>"merlon"</item>
-        <item>180</item>
-        <item>135</item>
+        <item>165</item>
+        <item>120</item>
         <item>205</item>
         <item>160</item>
-    </array>
+    </array> 
     <array name="castle_target_center_right_merlon">
         <item>"Rect"</item>
         <item>"Target"</item>
         <item>"merlon"</item>
-        <item>220</item>
-        <item>135</item>
-        <item>245</item>
-        <item>160</item>
-    </array>
-    <array name="castle_target_center_far_right_merlon">
-        <item>"Rect"</item>
-        <item>"Target"</item>
-        <item>"merlon"</item>
-        <item>260</item>
-        <item>135</item>
-        <item>285</item>
+        <item>230</item>
+        <item>120</item>
+        <item>270</item>
         <item>160</item>
     </array>
     <array name="castle_target_center_left_wall">
@@ -182,120 +104,51 @@
         <item>150</item>
         <item>290</item>
     </array>
+        <array name="castle_target_center_archway">
+        <item>"Rect"</item>
+        <item>"Target"</item>
+        <item>"arch"</item>
+        <item>155</item>
+        <item>165</item>
+        <item>215</item>
+        <item>200</item>
+    </array>
     <array name="castle_target_center_right_wall">
         <item>"Rect"</item>
         <item>"Target"</item>
         <item>"wall"</item>
-        <item>235</item>
+        <item>220</item>
         <item>165</item>
-        <item>285</item>
+        <item>270</item>
         <item>290</item>
     </array>
-    <array name="castle_target_center_left_arch">
-        <item>"Path"</item>
-        <item>"Target"</item>
-        <item>"upper_left_triangle"</item>
-        <item>155</item>
-        <item>165</item>
-        <item>190</item>
-        <item>190</item>
-        <item>0</item>
-        <item>0</item>
-        <item>35</item>
-        <item>0</item>
-        <item>0</item>
-        <item>25</item>
-    </array>
-    <array name="castle_target_center_right_arch">
-        <item>"Path"</item>
-        <item>"Target"</item>
-        <item>"upper_right_triangle"</item>
-        <item>195</item>
-        <item>165</item>
-        <item>230</item>
-        <item>190</item>
-        <item>0</item>
-        <item>0</item>
-        <item>35</item>
-        <item>0</item>
-        <item>35</item>
-        <item>25</item>
-    </array>
-
+   
     <!-- Right Tower Targets -->
     <array name="castle_target_right_battlement_left_merlon">
         <item>"Rect"</item>
         <item>"Target"</item>
         <item>"merlon"</item>
-        <item>275</item>
-        <item>55</item>
+        <item>260</item>
+        <item>40</item>
         <item>300</item>
-        <item>80</item>
-    </array>
-    <array name="castle_target_right_battlement_middle_merlon">
-        <item>"Rect"</item>
-        <item>"Target"</item>
-        <item>"merlon"</item>
-        <item>315</item>
-        <item>55</item>
-        <item>340</item>
         <item>80</item>
     </array>
     <array name="castle_target_right_battlement_right_merlon">
         <item>"Rect"</item>
         <item>"Target"</item>
         <item>"merlon"</item>
-        <item>355</item>
-        <item>55</item>
-        <item>380</item>
+        <item>325</item>
+        <item>40</item>
+        <item>365</item>
         <item>80</item>
-    </array>
-    <array name="castle_target_right_battlement_center_square">
-        <item>"Rect"</item>
-        <item>"Target"</item>
-        <item>"merlon"</item>
-        <item>315</item>
-        <item>85</item>
-        <item>340</item>
-        <item>110</item>
-    </array>
-    <array name="castle_target_right_battlement_left_triangle">
-        <item>"Path"</item>
-        <item>"Target"</item>
-        <item>"upper_right_triangle"</item>
-        <item>275</item>
-        <item>85</item>
-        <item>310</item>
-        <item>110</item>
-        <item>0</item>
-        <item>0</item>
-        <item>35</item>
-        <item>0</item>
-        <item>35</item>
-        <item>25</item>
-    </array>
-    <array name="castle_target_right_battlement_right_triangle">
-        <item>"Path"</item>
-        <item>"Target"</item>
-        <item>"upper_left_triangle"</item>
-        <item>345</item>
-        <item>85</item>
-        <item>380</item>
-        <item>110</item>
-        <item>0</item>
-        <item>0</item>
-        <item>35</item>
-        <item>0</item>
-        <item>0</item>
-        <item>25</item>
     </array>
     <array name="castle_target_right_battlement_tower">
         <item>"Rect"</item>
         <item>"Target"</item>
         <item>"tower"</item>
-        <item>290</item>
-        <item>115</item>
-        <item>365</item>
+        <item>275</item>
+        <item>85</item>
+        <item>350</item>
         <item>290</item>
     </array>
 
@@ -304,49 +157,19 @@
         <item>"Rect"</item>
         <item>"Spawn"</item>
         <item>"merlon"</item>
-        <item>50</item>
+        <item>40</item>
         <item>425</item>
-        <item>75</item>
-        <item>450</item>
-    </array>
-    <array name="castle_spawn_upper_right_triangle">
-        <item>"Path"</item>
-        <item>"Spawn"</item>
-        <item>"upper_right_triangle"</item>
-        <item>90</item>
-        <item>425</item>
-        <item>115</item>
-        <item>450</item>
-         <item>0</item>
-        <item>0</item>
-        <item>35</item>
-        <item>0</item>
-        <item>35</item>
-        <item>25</item>
-    </array>
-    <array name="castle_spawn_upper_left_triangle">
-        <item>"Path"</item>
-        <item>"Spawn"</item>
-        <item>"upper_left_triangle"</item>
-        <item>160</item>
-        <item>425</item>
-        <item>195</item>
-        <item>450</item>
-        <item>0</item>
-        <item>0</item>
-        <item>35</item>
-        <item>0</item>
-        <item>0</item>
-        <item>25</item>
+        <item>80</item>
+        <item>465</item>
     </array>
     <array name="castle_spawn_tower">
         <item>"Rect"</item>
         <item>"Spawn"</item>
         <item>"tower"</item>
-        <item>230</item>
+        <item>200</item>
         <item>425</item>
-        <item>305</item>
-        <item>600</item>
+        <item>275</item>
+        <item>630</item>
     </array>
     <array name="castle_spawn_wall">
         <item>"Rect"</item>
@@ -356,6 +179,15 @@
         <item>490</item>
         <item>140</item>
         <item>615</item>
+    </array>
+        <array name="castle_spawn_arch">
+        <item>"Rect"</item>
+        <item>"Spawn"</item>
+        <item>"arch"</item>
+        <item>300</item>
+        <item>425</item>
+        <item>360</item>
+        <item>460</item>
     </array>
     <array name="castle_color_red">
         <item>"Oval"</item>
