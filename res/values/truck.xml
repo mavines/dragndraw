@@ -168,9 +168,9 @@
         <item>"Spawn"</item>
         <item>@color/brown</item>
         <item>"front"</item>
-        <item>110</item>
+        <item>320</item>
         <item>555</item>
-        <item>185</item>
+        <item>395</item>
         <item>605</item>
     </array>
     <array name="truck_spawn_triangle">
@@ -178,10 +178,10 @@
         <item>"Spawn"</item>
         <item>@color/brown</item>
         <item>"triangle"</item>
-        <item>210</item>
-        <item>550</item>
-        <item>255</item>
-        <item>585</item>
+        <item>320</item>
+        <item>415</item>
+        <item>365</item>
+        <item>450</item>
         <item>0</item>
         <item>0</item>
         <item>45</item>
@@ -281,9 +281,9 @@
         <item>"Color"</item>
         <item>@color/brown</item>
         <item>"Color"</item>
-        <item>127</item>
+        <item>250</item>
         <item>593</item>
-        <item>244</item>
+        <item>370</item>
         <item>672</item>
         <item>"#15bca6"</item>
     </array>

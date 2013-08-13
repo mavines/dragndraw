@@ -5,8 +5,6 @@
         <item>@layout/truck_view</item>
         <item>@layout/ufo_view</item>
         <item>@layout/castle_view</item>
-        <item>@layout/truck_view</item>
-        <item>@layout/truck_view</item>
     </array>
 
 </resources>

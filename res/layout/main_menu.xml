@@ -2,17 +2,33 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
+    android:layout_gravity="center_vertical|center_horizontal"
     android:background="@drawable/background"
     android:orientation="vertical" >
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="50dp" />
 
     <GridView
         android:id="@+id/gridview"
         android:layout_width="fill_parent"
-        android:layout_height="fill_parent"
+        android:layout_height="300dp"
+        android:layout_gravity="center"
         android:layout_margin="@dimen/padding_large"
+        android:gravity="center"
         android:horizontalSpacing="@dimen/padding_large"
         android:numColumns="2"
         android:stretchMode="columnWidth"
-        android:verticalSpacing="@dimen/padding_large" />
+        android:verticalSpacing="@dimen/padding_medium" />
+
+    <Button
+        android:id="@+id/donebutton"
+        android:layout_width="96dp"
+        android:layout_margin="@dimen/padding_large"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:background="@drawable/done_button"
+        android:gravity="center" />
 
 </LinearLayout>

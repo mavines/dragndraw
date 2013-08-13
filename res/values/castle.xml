@@ -180,9 +180,9 @@
         <item>"Spawn"</item>
         <item>@color/brown</item>
         <item>"tower"</item>
-        <item>200</item>
+        <item>300</item>
         <item>425</item>
-        <item>275</item>
+        <item>375</item>
         <item>630</item>
     </array>
     <array name="castle_spawn_wall">
@@ -190,19 +190,19 @@
         <item>"Spawn"</item>
         <item>@color/brown</item>
         <item>"wall"</item>
-        <item>90</item>
-        <item>490</item>
-        <item>140</item>
-        <item>615</item>
+        <item>100</item>
+        <item>425</item>
+        <item>150</item>
+        <item>550</item>
     </array>
     <array name="castle_spawn_arch">
         <item>"Rect"</item>
         <item>"Spawn"</item>
         <item>@color/brown</item>
         <item>"arch"</item>
-        <item>300</item>
+        <item>200</item>
         <item>425</item>
-        <item>360</item>
+        <item>260</item>
         <item>460</item>
     </array>
     <array name="castle_color_red">
@@ -287,9 +287,9 @@
         <item>"Color"</item>
         <item>@color/black</item>
         <item>"Color"</item>
-        <item>127</item>
+        <item>250</item>
         <item>593</item>
-        <item>244</item>
+        <item>370</item>
         <item>672</item>
         <item>"#15bca6"</item>
     </array>

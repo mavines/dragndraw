@@ -75,7 +75,7 @@ public class MainMenu extends Activity {
 				imageView.setLayoutParams(new GridView.LayoutParams(width,
 						height));
 				imageView.setScaleType(ImageView.ScaleType.CENTER_INSIDE);
-				imageView.setPadding(8, 8, 8, 8);
+				imageView.setAdjustViewBounds(true);
 			} else {
 				imageView = (ImageView) convertView;
 			}
@@ -86,8 +86,7 @@ public class MainMenu extends Activity {
 
 		// references to our images
 		private Integer[] mThumbIds = { R.drawable.train_icon,
-				R.drawable.truck_icon, R.drawable.spaceship_icon,
-				R.drawable.boat_icon, R.drawable.bus_icon,
+				R.drawable.truck_icon, R.drawable.ufo_icon,
 				R.drawable.castle_icon };
 	}
 }
