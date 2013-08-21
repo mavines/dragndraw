@@ -11,6 +11,7 @@ import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemClickListener;
 import android.widget.BaseAdapter;
+import android.widget.Button;
 import android.widget.GridView;
 import android.widget.ImageView;
 
@@ -33,6 +34,14 @@ public class MainMenu extends Activity {
 				startActivity(intent);
 			}
 		});
+		
+		 //Setup the button listener           
+        final Button button = (Button) findViewById(R.id.donebutton);
+        button.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+            	finish();
+            }
+        });
 
 	}
 
